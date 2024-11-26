@@ -356,6 +356,269 @@
   <div id="post-list" class="flex-grow-1 px-xl-1">
     
     <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip14/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part14 React Query 로그인연동하기</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- React Query 사용을 위해 Query Client Provider로 App을 감싸주자
+
+[matzip/front/App.tsx]
+
+import {NavigationContainer} from &#39;@react-navigation/native&#39;;
+import React from &#39;react&#39;;
+import RootNavigator from &#39;./sr... -->
+                React Query 사용을 위해 Query Client Provider로 App을 감싸주자
+
+[matzip/front/App.tsx]
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+import {NavigationContainer} from &#39;@react-navigation/native&#39;;
+import React ...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1715052780"
+  data-df="ll"
+  
+>
+  May  7, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip13/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part13 React Query 사용 및 API추가하기</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- React Query란
+
+리액트 쿼리는 서버 데이터를 가져오고 캐싱하고 동기화하면 업데이트해주는 라이브러리이다
+
+React Query 설치
+
+(프론트 프로젝트 폴더에서)
+
+npm i @tanstack/react-query
+
+
+React Query에서 사용할 데이터 타입들을 미리 지정해두자
+
+[matzip/front/src/types/domain.ts]... -->
+                React Query란
+
+리액트 쿼리는 서버 데이터를 가져오고 캐싱하고 동기화하면 업데이트해주는 라이브러리이다
+
+React Query 설치
+
+(프론트 프로젝트 폴더에서)
+
+1
+npm i @tanstack/react-query
+
+
+React Query에서 사용할 데이터 타입들을 미리 지정해두자
+
+[matzip/front/src/types/domain.t...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1714966380"
+  data-df="ll"
+  
+>
+  May  6, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip12/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part12 앱 로그인 설계 및 기타 프로그램 설치</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- 앱 로그인 설계
+
+
+
+
+  Step1: 앱 실행시 Refresh Api Call을 호출하여 성공, 실패를 나눈다
+  Step2 :  실패한경우 신규 유저 또는 오래전에 로그인한 사용자로 토큰이 만료된 사용자로 토큰을 제거하고 다시 로그인을 하게하여  로그인 성공시 AccessToken(header), RefreshToken(storage)을 저장하고 ... -->
+                앱 로그인 설계
+
+
+
+
+  Step1: 앱 실행시 Refresh Api Call을 호출하여 성공, 실패를 나눈다
+  Step2 :  실패한경우 신규 유저 또는 오래전에 로그인한 사용자로 토큰이 만료된 사용자로 토큰을 제거하고 다시 로그인을 하게하여  로그인 성공시 AccessToken(header), RefreshToken(storage)을 저장하고 ...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1714879980"
+  data-df="ll"
+  
+>
+  May  5, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
       <a href="/posts/react_lifecycle_useEffect/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -949,239 +1212,6 @@ import InputField from &#39;../../componen... -->
       </a>
     </article>
     
-    <article class="card-wrapper card">
-      <a href="/posts/rn_project_matzip09/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part9 로그인 데이터 유효성 검증 및 리팩토링</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- useForm 훅 구현하기
-
-[matzip/front/src/hooks/useForm.ts]
-
-리액트에서 훅은 v16.8에 새로 도입된 기능으로, 함수형 컴포넌트(Functional Component)에서 사용되는 몇가지 기술들을 일컫는다. 리액트 훅은 함수형 컴포넌트(Functional Component)가 클래스형 컴포넌트(Class Compone... -->
-                useForm 훅 구현하기
-
-[matzip/front/src/hooks/useForm.ts]
-
-리액트에서 훅은 v16.8에 새로 도입된 기능으로, 함수형 컴포넌트(Functional Component)에서 사용되는 몇가지 기술들을 일컫는다. 리액트 훅은 함수형 컴포넌트(Functional Component)가 클래스형 컴포넌트(Class Compone...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1714620780"
-  data-df="ll"
-  
->
-  May  2, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Project,
-                  ReatNative
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/rn_project_matzip08/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part8 홈 스크린 및 Input컴포넌트 구현하기</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- 최초 화면에 로고를 표시하기 위해 로고 파일 넣기
-
-[matzip/front/src/assets/matzip.png] 해당 경로로 폴더 및 로고파일 넣어주도록하자
-
-[matzip/front/src/screens/AuthHomeScreen.tsx] 파일 코드를 수정하자
-
-
-  20번째 줄에 react-native에서 기본으로 제공하는 Image 컴포넌트... -->
-                최초 화면에 로고를 표시하기 위해 로고 파일 넣기
-
-[matzip/front/src/assets/matzip.png] 해당 경로로 폴더 및 로고파일 넣어주도록하자
-
-[matzip/front/src/screens/AuthHomeScreen.tsx] 파일 코드를 수정하자
-
-
-  20번째 줄에 react-native에서 기본으로 제공하는 Image 컴포넌트...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1714534380"
-  data-df="ll"
-  
->
-  May  1, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Project,
-                  ReatNative
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/react_about/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">React란</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- React란
-
-React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브러리이며 컴포넌트라는 작은 조각들로 UI를 구성한다 또한 Virtual Dom이라는 개념을 사용하여 성능을 최적화한다
-
-주요 특징
-
-
-  
-    가독성과 유지보수성: JSX 문법을 사용하여 컴포넌트 기반으로 UI를 작성할 수 있으므로 가독성이 높고 유지보수가 용이하며 각 컴포... -->
-                React란
-
-React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브러리이며 컴포넌트라는 작은 조각들로 UI를 구성한다 또한 Virtual Dom이라는 개념을 사용하여 성능을 최적화한다
-
-주요 특징
-
-
-  
-    가독성과 유지보수성: JSX 문법을 사용하여 컴포넌트 기반으로 UI를 작성할 수 있으므로 가독성이 높고 유지보수가 용이하며 각 컴포...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1714534380"
-  data-df="ll"
-  
->
-  May  1, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Framework,
-                  React
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
   </div>
   <!-- #post-list -->
 
@@ -1355,25 +1385,12 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
       
 
       
-        <!-- hide number -->
-        
-      
-    
-      
-      
-      
-      
-      
-
-      
-
-      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page11"
-          >11</a>
+            href="/page10"
+          >10</a>
         </li>
       
     
@@ -1381,7 +1398,7 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>3</span>
-      <span class="text-muted">/ 11</span>
+      <span class="text-muted">/ 10</span>
     </li>
 
     <!-- right arrow -->
@@ -1570,11 +1587,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1886,6 +1898,56 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1945,76 +2007,12 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
     
   
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2025,11 +2023,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -2064,11 +2057,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
-  
-    
-    
-    
-    
       
     
   
@@ -2116,6 +2104,45 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2172,9 +2199,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
         <a class="post-tag btn btn-outline-primary" href="/tags/springboot/">SpringBoot</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/access/">access</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
       
         
@@ -2185,6 +2209,9 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/typescript/">Typescript</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/git/">Git</a>
       
     </div>
   </section>
@@ -2378,11 +2405,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -2694,6 +2716,56 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2753,76 +2825,12 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
-  
-    
-    
-    
-    
       
-        
-        
-
-  
-    
-    
-    
     
   
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2833,11 +2841,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
         
         
 
-  
-    
-    
-    
-    
   
     
     
@@ -2872,11 +2875,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
-  
-    
-    
-    
-    
       
     
   
@@ -2924,6 +2922,45 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2980,9 +3017,6 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
         <a class="post-tag btn btn-outline-primary" href="/tags/springboot/">SpringBoot</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/access/">access</a>
-      
-        
         <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
       
         
@@ -2993,6 +3027,9 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/typescript/">Typescript</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/git/">Git</a>
       
     </div>
   </section>

@@ -4,7 +4,7 @@
   <id>http://0.0.0.0:4000/</id>
   <title>Jogyejin</title>
   <subtitle>기술블로그 &amp;&amp; 프로젝트공유</subtitle>
-  <updated>2024-11-26T19:46:54+09:00</updated>
+  <updated>2024-11-26T22:03:34+09:00</updated>
   <author>
     <name>Jogyejin</name>
     <uri>http://0.0.0.0:4000/</uri>
@@ -17,6 +17,201 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>NestJS Controller</title>
+    <link href="http://0.0.0.0:4000/posts/nestjs_controller/" rel="alternate" type="text/html" title="NestJS Controller" />
+    <published>2024-10-04T12:33:00+09:00</published>
+  
+    <updated>2024-10-04T12:33:00+09:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/nestjs_controller/</id>
+    <content src="http://0.0.0.0:4000/posts/nestjs_controller/" />
+    <author>
+      <name>Jogyejin</name>
+    </author>
+
+  
+    
+    <category term="Framework" />
+    
+    <category term="NestJs" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      NestJS Controller
+
+  컨트롤러는 Client로부터 들어오는 요청을 처리 하고 해당 클라이언트에 응답을 반환하는 역할을 해줍니다
+NestJS에서의 기본 컨트롤러를 만들기 위해서는 클래스와 데코레이터를 사용합니다 데코레이터(@)는 클래스를 필요한 메타데이터와 연결하고 Nest가 라우팅 맵을 만들 수 있도록 합니다
+
+
+
+
+
+
+
+
+
+Controller 예제
+
+import { Controller, Get } from '@nestjs/common';
+
+@Controller('cats')
+export class CatsController {
+  @Get()
+  findAll(): string {
+    return 'This action returns all cats';
+  }
+}
+
+
+
+  (1) ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>NestJS 시작하기</title>
+    <link href="http://0.0.0.0:4000/posts/nestjs_start/" rel="alternate" type="text/html" title="NestJS 시작하기" />
+    <published>2024-10-03T12:33:00+09:00</published>
+  
+    <updated>2024-10-03T12:33:00+09:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/nestjs_start/</id>
+    <content src="http://0.0.0.0:4000/posts/nestjs_start/" />
+    <author>
+      <name>Jogyejin</name>
+    </author>
+
+  
+    
+    <category term="Framework" />
+    
+    <category term="NestJs" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      NestJS를 사용하기 위한 환경구성
+
+  NestJS를 사용하기위해서는 nodejs와 npm이 선행적으로 설치 되어있어야합니다
+👉🏻Nodejs 공식 다운로드
+
+
+
+
+
+
+
+NestJS 설치하기
+npm install -g @nestjs/cli
+
+
+
+
+
+
+
+NestJS 프로젝트 생성하기
+nest new 프로젝트 이름
+
+
+
+
+
+
+NestJS 프로젝트 실행하기
+npm run start:dev
+
+
+
+
+
+
+
+NestJS 기본 폴더 구조
+
+  app.controller.ts : 애플리케이션의 라우팅 및 http 요청 처리를 담당하는 컨트롤러 파일
+  app.controller.spec.ts : 테스트 파일 (컨트롤러에 대한 단위 테스트)
+  app.module.ts : 애플리케이션의 최상위 모듈파일
+  app.se...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>NestJS 프레임워크 알아보기</title>
+    <link href="http://0.0.0.0:4000/posts/nestjs_about/" rel="alternate" type="text/html" title="NestJS 프레임워크 알아보기" />
+    <published>2024-10-01T12:33:00+09:00</published>
+  
+    <updated>2024-10-01T12:33:00+09:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/nestjs_about/</id>
+    <content src="http://0.0.0.0:4000/posts/nestjs_about/" />
+    <author>
+      <name>Jogyejin</name>
+    </author>
+
+  
+    
+    <category term="Framework" />
+    
+    <category term="NestJs" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      NestJS가 뭐야?
+
+
+  NestJS는 자바스크립트나 타입스크립트로 서버 애플리케이션을 개발할 수 있는 백엔드 웹 프레임워크입니다
+
+
+
+
+
+
+NestJS의 특징
+
+  개발자와 팀이 테스트가 가능합니다
+  확장이 가능하며 유지보수성이 뛰어난 아키텍처를 제공합니다
+  javascript, typescript를 지원하여 기존의 코드 실수를 보완하였습니다
+  모듈화된 구조로 각 애플리케이션을 모듈 단위로 나눠서 개발할 수 있습니다
+  의존성 주입 패턴을 지원하여 코드의 재사용성과 유지보수성을 높였습니다
+
+
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -122,160 +317,6 @@ console.log(arr.join()); // 출력: 안녕,자바스크립트,반가워
 console.log(arr.join("-")); // 출력: 안녕-자바스크립트-반가워
 
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Javascript includes 메서드</title>
-    <link href="http://0.0.0.0:4000/posts/javascript_includes/" rel="alternate" type="text/html" title="Javascript includes 메서드" />
-    <published>2024-09-01T12:33:00+09:00</published>
-  
-    <updated>2024-09-01T12:33:00+09:00</updated>
-  
-    <id>http://0.0.0.0:4000/posts/javascript_includes/</id>
-    <content src="http://0.0.0.0:4000/posts/javascript_includes/" />
-    <author>
-      <name>Jogyejin</name>
-    </author>
-
-  
-    
-    <category term="Develop" />
-    
-    <category term="Javascript" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      includes 메서드 이해하기
-
-
-  includes 메서드는 배열에 특정 요소가 있는지를 판단할 때 사용되는 메서드이다 배열에서 주어진 요소가 포함되어 있으면 true를 그렇지 않으면 false를 반환한다
-
-
-
-
-
-
-includes 메서드 사용해보기
-const arr = [1,2,3,4,5];
-
-console.log(arr.includes(3)); //출력 : true
-console.log(arr.includes(7)); //출력 : false
-
-
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React Map 예제</title>
-    <link href="http://0.0.0.0:4000/posts/react_example_map/" rel="alternate" type="text/html" title="React Map 예제" />
-    <published>2024-08-01T12:33:00+09:00</published>
-  
-    <updated>2024-08-01T12:33:00+09:00</updated>
-  
-    <id>http://0.0.0.0:4000/posts/react_example_map/</id>
-    <content src="http://0.0.0.0:4000/posts/react_example_map/" />
-    <author>
-      <name>Jogyejin</name>
-    </author>
-
-  
-    
-    <category term="Framework" />
-    
-    <category term="React" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Map 함수 이해하기
-Map 함수는 React에서 제공하는 함수는 아니며 Javascript 언어에서 사용할 수 있는 함수이다.
-Map함수를 사용하면 콜백 함수를 이용해 각각의 배열 요소를 호출해서 그 값을 변환할 수 있게 해준다. 
-React예제로 Map을 확인하는 이유는 React에서 어떠한 데이터를 반복적으로 렌더링하거나 컴포넌트를 렌더링할 때 Map함수를 많이 사용함으로, 
-이번 예제를 통해 Map함수에대해 자세히 알아보도록 한다
-
-✏️리액트에서 동적인 배열을 렌더링해야 할 때는 자바스크립트 배열 내장함수인 map()을 사용하여 일반 데이터 배열을 리액트 엘리먼트로 이루어진 배열로 변환이 가능하다 실제로 리액트에서 배열은 게시글, 리스트, 피드를 표시하는데에 자주사용된다
-
-Map 함수 사용법
-a...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>React Route</title>
-    <link href="http://0.0.0.0:4000/posts/react_Route/" rel="alternate" type="text/html" title="React Route" />
-    <published>2024-07-16T12:33:00+09:00</published>
-  
-    <updated>2024-07-16T12:33:00+09:00</updated>
-  
-    <id>http://0.0.0.0:4000/posts/react_Route/</id>
-    <content src="http://0.0.0.0:4000/posts/react_Route/" />
-    <author>
-      <name>Jogyejin</name>
-    </author>
-
-  
-    
-    <category term="Framework" />
-    
-    <category term="React" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      라우팅 이해하기
-
-
-  라우팅이란 웹 서비스에있어서 페이지 이동을 수행시켜주는 기능이다 즉,
-사용자가 요청한 URL에 따라 해당 URL에 맞는 페이지로 이동 시켜서 보여주는 것이다 
-리액트의 라우팅 구현은 웹 페이지를 어디서 만드느냐에 따라 적절한 페이지를 반환하는 일련의 과정이며 서버 사이드 렌더링과, 클라이언트 사이드 렌더링으로 구분된다 리액트는 클라이언트 사이드 렌더링 방식을 채택하며 두 방식의 차이는 아래 SSR, CSR 를 이해하자
-
-
-
-
-
-
-리액트 라우터 이해하기
-라우팅을 위한 기능과 코드를 개발자 모두가 알 필요는 없다 리액트의 라우터라는 페이지 라우팅 전용 라이브러리를 사용하면 굳이 개발자가 구현하지 않아도 필요한 기능을 손쉽게 구현할 수 있다 
-
-
-
-
-
-리액트 라우터 설치하기
-
-npm ...
     </summary>
   
 
