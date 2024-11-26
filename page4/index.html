@@ -356,14 +356,14 @@
   <div id="post-list" class="flex-grow-1 px-xl-1">
     
     <article class="card-wrapper card">
-      <a href="/posts/typescript02/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/jsx/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Typescript 문법</h1>
+            <h1 class="card-title my-2 mt-md-0">JSX란</h1>
 
             <div class="card-text content mt-0 mb-3">
               <p>
@@ -373,37 +373,28 @@
 
 
 
-                <!-- Typescript 데이터 타입
-
-타입스크립트로 변수나 함수와 같은 자바스크립트 코드에 타입을 정의할 수 있다
-
-대표적인 데이터 타입들을 알아보자
+                <!-- 개요
 
 
   
-    String : 자바스크립트 변수의 타입이 문자열인 경우 하기 코드와 같이 선언한다
-
-    let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
-    
+    JSX 는 JavaScript 문법을 확장한것으로 JavaScript + XML/HTML로 볼 수 있다
   
   
-  ... -->
-                Typescript 데이터 타입
-
-타입스크립트로 변수나 함수와 같은 자바스크립트 코드에 타입을 정의할 수 있다
-
-대표적인 데이터 타입들을 알아보자
+    JSX는 리액트로 프로젝트를 개발할 때 사용되므로 공식적인 자바스크립트 문법은 아니다
+  
+  
+    JSX는 React “엘리먼트(element)”를 생성한다. React 엘리먼트는 브라우저 DOM 엘리먼트... -->
+                개요
 
 
   
-    String : 자바스크립트 변수의 타입이 문자열인 경우 하기 코드와 같이 선언한다
-
-    1
-let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
-    
+    JSX 는 JavaScript 문법을 확장한것으로 JavaScript + XML/HTML로 볼 수 있다
   
   
-...
+    JSX는 리액트로 프로젝트를 개발할 때 사용되므로 공식적인 자바스크립트 문법은 아니다
+  
+  
+    JSX는 React “엘리먼트(element)”를 생성한다. React 엘리먼트는 브라우저 DOM 엘리먼트...
               </p>
             </div>
 
@@ -421,11 +412,11 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
 
 <time
   
-  data-ts="1712028780"
+  data-ts="1714534380"
   data-df="ll"
   
 >
-  Apr  2, 2024
+  May  1, 2024
 </time>
 
 
@@ -434,8 +425,8 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
                 <i class="far fa-folder-open fa-fw me-1"></i>
                 <span class="categories">
                   
-                  Develop,
-                  Typescript
+                  Framework,
+                  React
                 </span>
                 
               </div>
@@ -450,14 +441,14 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
     </article>
     
     <article class="card-wrapper card">
-      <a href="/posts/javascript_01/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/rn_project_matzip07/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Javascript 구조 분해 할당</h1>
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part7 Pressable 컴포넌트 개념과 Button 컴포넌트 구현하기</h1>
 
             <div class="card-text content mt-0 mb-3">
               <p>
@@ -467,22 +458,28 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
 
 
 
-                <!-- 구조 분해 할당이란
+                <!-- 공통 컴포넌트
 
-객체와 배열은 자바스크립트에서 가장 많이 쓰이는 자료 구조이다
+여러 페이지에서 버튼과 같이 동일한 스타일을 여러번 사용하고 싶은경우 컴포넌트를 생성해 가져다 사용하면 효율적으로 구현할 수 있다
 
-키를 가진 데이터 여러 개를 하나로 사용할 때 객체를, 각 컬렉션에 데이터를 순서대로 저장할 땐 배열을 사용한다
+Pressable 컴포넌트
 
-그러다보니 함수에 객체나 배열을 전달해야 하는 경우가 생긴다 또한 객체나 배열에 저장된 데이터 전체가 아닌 일부만 전달이 필요한 경우가 생기기도 한다.
-... -->
-                구조 분해 할당이란
+Pressable 컴포넌트는 터치 이벤트를 처리하는 데 사용되는 컴포넌트이다
 
-객체와 배열은 자바스크립트에서 가장 많이 쓰이는 자료 구조이다
+👉🏻리액트네이티브 Pressable 공식문서 여기를 참고
 
-키를 가진 데이터 여러 개를 하나로 사용할 때 객체를, 각 컬렉션에 데이터를 순서대로 저장할 땐 배열을 사용한다
+기본적으로 touchableopacit... -->
+                공통 컴포넌트
 
-그러다보니 함수에 객체나 배열을 전달해야 하는 경우가 생긴다 또한 객체나 배열에 저장된 데이터 전체가 아닌 일부만 전달이 필요한 경우가 생기기도 한다.
-...
+여러 페이지에서 버튼과 같이 동일한 스타일을 여러번 사용하고 싶은경우 컴포넌트를 생성해 가져다 사용하면 효율적으로 구현할 수 있다
+
+Pressable 컴포넌트
+
+Pressable 컴포넌트는 터치 이벤트를 처리하는 데 사용되는 컴포넌트이다
+
+👉🏻리액트네이티브 Pressable 공식문서 여기를 참고
+
+기본적으로 touchableopacit...
               </p>
             </div>
 
@@ -500,11 +497,11 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
 
 <time
   
-  data-ts="1712028780"
+  data-ts="1713497580"
   data-df="ll"
   
 >
-  Apr  2, 2024
+  Apr 19, 2024
 </time>
 
 
@@ -513,8 +510,8 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
                 <i class="far fa-folder-open fa-fw me-1"></i>
                 <span class="categories">
                   
-                  Develop,
-                  Javascript
+                  Project,
+                  ReatNative
                 </span>
                 
               </div>
@@ -529,14 +526,14 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
     </article>
     
     <article class="card-wrapper card">
-      <a href="/posts/javascript_call_apply_bind/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/rn_project_matzip06/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Javascript 함수의 Call & Apply & Bind</h1>
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part6 스크린 구조 및 옵션 설정</h1>
 
             <div class="card-text content mt-0 mb-3">
               <p>
@@ -546,32 +543,36 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
 
 
 
-                <!-- Call 함수란
+                <!-- 스크린 폴더 구조화하기
 
-먼저 Call을 사용하기전에 왜 사용하는지를 알아보자
-
-모든 함수는 실행할때 함수 앞에 작성한 오브젝트를 this로 참조한다 하기 코드를 보자
+현재 스크린파일들은 [matzip/front/src/navigations/screens] 밑에 있는데 조금 더 세분화하여 구조화를 진행한다
 
 
+  
+    screens
 
-위 코드처럼 현재 함수를 실행하는곳이 어느 위치(오브젝트)냐가 즉 this가 되고 this에 따라 함수 결과값이 달라진다
+    
+      
+        auth
 
-그럼 어떻게 해야 데이터 중심적인 결과를 도출할 수 있을까?
+        
+          AuthHomeScreen.tsx
+          LoginScreen.t... -->
+                스크린 폴더 구조화하기
 
-... -->
-                Call 함수란
-
-먼저 Call을 사용하기전에 왜 사용하는지를 알아보자
-
-모든 함수는 실행할때 함수 앞에 작성한 오브젝트를 this로 참조한다 하기 코드를 보자
+현재 스크린파일들은 [matzip/front/src/navigations/screens] 밑에 있는데 조금 더 세분화하여 구조화를 진행한다
 
 
+  
+    screens
 
-위 코드처럼 현재 함수를 실행하는곳이 어느 위치(오브젝트)냐가 즉 this가 되고 this에 따라 함수 결과값이 달라진다
+    
+      
+        auth
 
-그럼 어떻게 해야 데이터 중심적인 결과를 도출할 수 있을까?
-
-...
+        
+          AuthHomeScreen.tsx
+          LoginScreen.t...
               </p>
             </div>
 
@@ -589,11 +590,11 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
 
 <time
   
-  data-ts="1712028780"
+  data-ts="1713411180"
   data-df="ll"
   
 >
-  Apr  2, 2024
+  Apr 18, 2024
 </time>
 
 
@@ -602,8 +603,8 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
                 <i class="far fa-folder-open fa-fw me-1"></i>
                 <span class="categories">
                   
-                  Develop,
-                  Javascript
+                  Project,
+                  ReatNative
                 </span>
                 
               </div>
@@ -618,14 +619,14 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
     </article>
     
     <article class="card-wrapper card">
-      <a href="/posts/javascript_map/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/rn_project_matzip05/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Javascript Map함수</h1>
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part5 Drawer Navigation 설치 및 적용</h1>
 
             <div class="card-text content mt-0 mb-3">
               <p>
@@ -635,31 +636,454 @@ let name: string = &quot;bts&quot;; // 문자열의 값을 갖는다
 
 
 
-                <!-- Map 함수란
+                <!-- Drawer Navigator란
 
-Map함수는  콜백 함수를 이용해 각각의 요소에 호출해서 그 값을 변환할 수 있게 해준다. 다시 말하자면 콜백 함수는 배열의 각 요소에 실행된다
+아래와 같이 화면 간 탐색을 위해 왼쪽(때로는 오른쪽)의 서랍을 사용할 수 있게해주는 기능이다
 
-예를들어 간단한 예제 코드를 보도록한다
+해당 프로젝트에서는 사용자가 바로 Drawer Navigation기능을 사용하는것이 아닌 로그인에 성공한 사용자만 Drawer기능을 사용하고 로그인하지 않은 사용자는 Stack Navigation기능을 사용한다
 
-먼저 다음과 같은 배열 요소가 있다고 가정해본다
 
-[단순한 Javascript 배열]
 
-  //배열 arr을 만들고 1~5 까지 숫자를 넣어둔다 
- ... -->
-                Map 함수란
+Dar... -->
+                Drawer Navigator란
 
-Map함수는  콜백 함수를 이용해 각각의 요소에 호출해서 그 값을 변환할 수 있게 해준다. 다시 말하자면 콜백 함수는 배열의 각 요소에 실행된다
+아래와 같이 화면 간 탐색을 위해 왼쪽(때로는 오른쪽)의 서랍을 사용할 수 있게해주는 기능이다
 
-예를들어 간단한 예제 코드를 보도록한다
+해당 프로젝트에서는 사용자가 바로 Drawer Navigation기능을 사용하는것이 아닌 로그인에 성공한 사용자만 Drawer기능을 사용하고 로그인하지 않은 사용자는 Stack Navigation기능을 사용한다
 
-먼저 다음과 같은 배열 요소가 있다고 가정해본다
 
-[단순한 Javascript 배열]
+
+Dar...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1713411180"
+  data-df="ll"
+  
+>
+  Apr 18, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip04/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part4 상수화와 navigation 고도화</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- 반복되는 값과 변경되지 않는 변수들을 상수화하기위해 상수 파일을 만든다
+
+[matzip/front/src/constants/navigations.ts] 파일을 작성한다
+
+authNavigations는 각 스크린들의 네임을 매번 호출하기때문에 따로 상수화를 해주고 export로 외부에서 가져올 수 있도록하였다
+
+나중에 버튼 색상등 반복되어 사용되는 고정... -->
+                반복되는 값과 변경되지 않는 변수들을 상수화하기위해 상수 파일을 만든다
+
+[matzip/front/src/constants/navigations.ts] 파일을 작성한다
+
+authNavigations는 각 스크린들의 네임을 매번 호출하기때문에 따로 상수화를 해주고 export로 외부에서 가져올 수 있도록하였다
+
+나중에 버튼 색상등 반복되어 사용되는 고정...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1713411180"
+  data-df="ll"
+  
+>
+  Apr 18, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip03/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part3 stack navigation</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- Stack Navigation
+
+stack navigator라는 컨트롤러가 하위에 stack screen을 갖는데  새로운 스크린으로 이동할 때마다 Stack 맨 위에 싸여서, 순차적으로 앞뒤 화면 이동이 가능하게 해주는 기능이다
+
+
+
+navigation 기능을 위해 AuthStackNavigator 코드 작성
+
+[matzip/front/src/nav... -->
+                Stack Navigation
+
+stack navigator라는 컨트롤러가 하위에 stack screen을 갖는데  새로운 스크린으로 이동할 때마다 Stack 맨 위에 싸여서, 순차적으로 앞뒤 화면 이동이 가능하게 해주는 기능이다
+
+
+
+navigation 기능을 위해 AuthStackNavigator 코드 작성
+
+[matzip/front/src/nav...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1713324780"
+  data-df="ll"
+  
+>
+  Apr 17, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip02/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part2 최초화면 및 로그인 화면 초기구성</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- 최초화면인 AuthHomeScreen 코드 작성
+
+[matzip/front/src/screens/AuthHomeScreen.tsx] 파일을 작성한다
+
+해당 파일은 로그인화면으로 이동, 회원가입화면으로 이동등의 기능을 갖는 사용자 최초 화면으로 사용예정
+
+import React from &#39;react&#39;;
+import {Button, SafeAreaView... -->
+                최초화면인 AuthHomeScreen 코드 작성
+
+[matzip/front/src/screens/AuthHomeScreen.tsx] 파일을 작성한다
+
+해당 파일은 로그인화면으로 이동, 회원가입화면으로 이동등의 기능을 갖는 사용자 최초 화면으로 사용예정
 
 1
 2
-  //배열 arr을 만들고 1~5 까지 숫자를 넣어둔...
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+import React ...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1713238380"
+  data-df="ll"
+  
+>
+  Apr 16, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/rn_project_matzip01/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">맛집 앱 만들기 프로젝트 Part1 프로젝트 설치 및 기본설정</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- 프로젝트 설명
+
+맛집을 기록하고 기록한 내용을 공유하는 앱을 만드는 프로젝트이다
+
+그럼 프로젝트를 생성해보도록한다 프로젝트의 구조를 먼저 구상해보자
+
+
+  
+    front
+
+    
+      App.tsx
+      src
+        
+          navigation
+            
+              AuthStackNav... -->
+                프로젝트 설명
+
+맛집을 기록하고 기록한 내용을 공유하는 앱을 만드는 프로젝트이다
+
+그럼 프로젝트를 생성해보도록한다 프로젝트의 구조를 먼저 구상해보자
+
+
+  
+    front
+
+    
+      App.tsx
+      src
+        
+          navigation
+            
+              AuthStackNav...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1713151980"
+  data-df="ll"
+  
+>
+  Apr 15, 2024
+</time>
+
+
+                <!-- categories -->
+                
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                  Project,
+                  ReatNative
+                </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+    
+    <article class="card-wrapper card">
+      <a href="/posts/typescript04/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">Typescript as const 효과적인 상수관리</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+                
+
+
+
+
+
+                <!-- 리터럴 타입(readonly)과 프리미티브 타입
+
+타입스크립트에서는 string, number 등과 같이 포괄적인 타입에도 명확한 값(리터럴 타입)을 설정하는것이 가능하다
+
+예를들어 아래와 같이 name을 let으로 선언했을경우 string타입이라는 포괄적인 의미를 가지고있는 primitive type을 갖는다
+
+let name = &#39;홍길동&#39;;
+con... -->
+                리터럴 타입(readonly)과 프리미티브 타입
+
+타입스크립트에서는 string, number 등과 같이 포괄적인 타입에도 명확한 값(리터럴 타입)을 설정하는것이 가능하다
+
+예를들어 아래와 같이 name을 let으로 선언했을경우 string타입이라는 포괄적인 의미를 가지고있는 primitive type을 갖는다
+
+1
+2
+let name = &#39;홍길동&#39;;...
               </p>
             </div>
 
@@ -691,77 +1115,6 @@ Map함수는  콜백 함수를 이용해 각각의 요소에 호출해서 그 �
                 <span class="categories">
                   
                   Develop,
-                  Javascript
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/typescript01/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Typescript 개요</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- Typescript개요
-
-
-  타입스크립트는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 마이크로소프트에서 개발, 유지하고 있으며 엄격한 문법을 지원한다. C#의 리드 아키텍트이자 델파이, 터보 파스칼의 창시자인 Anders Hejlsberg가 개발에 참여한다. 클라이언트 사이드와 서버 사이드를 위한 개발에 사용할 수 있다. 타입스크립트는 자... -->
-                Typescript개요
-
-
-  타입스크립트는 자바스크립트의 슈퍼셋인 오픈소스 프로그래밍 언어이다. 마이크로소프트에서 개발, 유지하고 있으며 엄격한 문법을 지원한다. C#의 리드 아키텍트이자 델파이, 터보 파스칼의 창시자인 Anders Hejlsberg가 개발에 참여한다. 클라이언트 사이드와 서버 사이드를 위한 개발에 사용할 수 있다. 타입스크립트는 자...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1711942380"
-  data-df="ll"
-  
->
-  Apr  1, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Develop,
                   Typescript
                 </span>
                 
@@ -777,14 +1130,14 @@ Map함수는  콜백 함수를 이용해 각각의 요소에 호출해서 그 �
     </article>
     
     <article class="card-wrapper card">
-      <a href="/posts/vue_level01/" class="post-preview row g-0 flex-md-row-reverse">
+      <a href="/posts/typescript03/" class="post-preview row g-0 flex-md-row-reverse">
         
 
         
 
         <div class="col-md-12">
           <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">vue 입문 Level01</h1>
+            <h1 class="card-title my-2 mt-md-0">Typescript 인터페이스(Interface)</h1>
 
             <div class="card-text content mt-0 mb-3">
               <p>
@@ -794,20 +1147,44 @@ Map함수는  콜백 함수를 이용해 각각의 요소에 호출해서 그 �
 
 
 
-                <!-- vue의 기본 구조
+                <!-- Typescript 인터페이스
 
-SPA와 Router
+인터페이스는 상호 간에 정의한 약속 혹은 규칙을 의미한다.
 
-Vue 기반 애플리케이션은 흔히 SPA(Single Page Application, 한 화면으로 구성된 애플리케이션을 말한다)로 구성되는데, 이때 한 페이지 내에서도 다른 페이지로 이동할 필요 없이 마치 여러 개의 페이지가 있는 듯한 방식으로 작동하게 해 주는 것이 바로 Vue Router이다.
+타입스크립트에서의 인터페이스는 보통 다음과 같은 범주에 대해 약속을 정의할 수 있다
 
-이는 보통... -->
-                vue의 기본 구조
 
-SPA와 Router
+  객체의 스펙(속성과 속성의 타입)
+  함수의 파라미터
+  함수의 스펙(파라미터 타입, 반환 타입 등)
+  배열과 객체를 접근하는 방식
+  클래스
 
-Vue 기반 애플리케이션은 흔히 SPA(Single Page Application, 한 화면으로 구성된 애플리케이션을 말한다)로 구성되는데, 이때 한 페이지 내에서도 다른 페이지로 이동할 필요 없이 마치 여러 개의 페이지가 있는 듯한 방식으로 작동하게 해 주는 것이 바로 Vue Router이다.
 
-이는 보통...
+
+
+
+
+인터페이스 사... -->
+                Typescript 인터페이스
+
+인터페이스는 상호 간에 정의한 약속 혹은 규칙을 의미한다.
+
+타입스크립트에서의 인터페이스는 보통 다음과 같은 범주에 대해 약속을 정의할 수 있다
+
+
+  객체의 스펙(속성과 속성의 타입)
+  함수의 파라미터
+  함수의 스펙(파라미터 타입, 반환 타입 등)
+  배열과 객체를 접근하는 방식
+  클래스
+
+
+
+
+
+
+인터페이스 사...
               </p>
             </div>
 
@@ -825,84 +1202,11 @@ Vue 기반 애플리케이션은 흔히 SPA(Single Page Application, 한 화면�
 
 <time
   
-  data-ts="1709523180"
+  data-ts="1712028780"
   data-df="ll"
   
 >
-  Mar  4, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Framework,
-                  Vue
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/javascript_spread_rest/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Javascript Spread와 Rest Parameters</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- Spread Operator
-
-전개 연산자는 ES6이후부터 사용할 수 있는 문법으로 배열 또는 객체를 하나하나 넘기는 용도로 사용된다
-
-배열, 문자열과 같은 반복 가능한(iterable) 요소 앞에 사용해서 배열의 개별 요소를 다른 배열이나 함수의 인자로 펼쳐서 넘기는게 가능하다 객체에 대해 전개 연산자를 사용하면 객체의 속성을 넘기는 것도 가능하며 ... -->
-                Spread Operator
-
-전개 연산자는 ES6이후부터 사용할 수 있는 문법으로 배열 또는 객체를 하나하나 넘기는 용도로 사용된다
-
-배열, 문자열과 같은 반복 가능한(iterable) 요소 앞에 사용해서 배열의 개별 요소를 다른 배열이나 함수의 인자로 펼쳐서 넘기는게 가능하다 객체에 대해 전개 연산자를 사용하면 객체의 속성을 넘기는 것도 가능하며 ...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1708831980"
-  data-df="ll"
-  
->
-  Feb 25, 2024
+  Apr  2, 2024
 </time>
 
 
@@ -912,250 +1216,7 @@ Vue 기반 애플리케이션은 흔히 SPA(Single Page Application, 한 화면�
                 <span class="categories">
                   
                   Develop,
-                  Javascript
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/IntelliJspring_encoding/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">IntelliJ Springboot 한글 인코딩</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- 문제
-
-
-  IntelliJ에서 Springboot를 작업하다보면 콘솔에 하기 그림과 같이 한글이 깨져 출력되는 경우
-
-
-
-
-
-  API호출에 따른 Response에서 한글이 깨져서 응답되는경우
-
-
-해결방법
-
-Step01 IntelliJ설정 변경
-
-하기 사진과 같이
-
-메뉴 -&amp;gt; Settings -&amp;gt; File Encodings -&amp;gt; 모두... -->
-                문제
-
-
-  IntelliJ에서 Springboot를 작업하다보면 콘솔에 하기 그림과 같이 한글이 깨져 출력되는 경우
-
-
-
-
-
-  API호출에 따른 Response에서 한글이 깨져서 응답되는경우
-
-
-해결방법
-
-Step01 IntelliJ설정 변경
-
-하기 사진과 같이
-
-메뉴 -&amp;gt; Settings -&amp;gt; File Encodings -&amp;gt; 모두...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1707967980"
-  data-df="ll"
-  
->
-  Feb 15, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Utils,
-                  IntelliJ
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/vue_vite/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Vue vite란</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- vite(비트)란?
-비트는 자바스크립트 네이티브 모듈 (opens new window)을 기반으로 한 데브 서버이다, 이미 현대 프런트엔드 개발 생태계는 웹팩을 중심으로 개발 환경과 배포 시스템이 구축되어 있다 그런데 왜 비트와 같은 도구들이 나왔을까? 그 이유는 웹팩을 사용할 때보다 훨씬 더 빠르게 개발하고 배포할 수 있기 때문이다 왜 빠른지 이해하... -->
-                vite(비트)란?
-비트는 자바스크립트 네이티브 모듈 (opens new window)을 기반으로 한 데브 서버이다, 이미 현대 프런트엔드 개발 생태계는 웹팩을 중심으로 개발 환경과 배포 시스템이 구축되어 있다 그런데 왜 비트와 같은 도구들이 나왔을까? 그 이유는 웹팩을 사용할 때보다 훨씬 더 빠르게 개발하고 배포할 수 있기 때문이다 왜 빠른지 이해하...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1707276780"
-  data-df="ll"
-  
->
-  Feb  7, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Framework,
-                  Vue
-                </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-    
-    <article class="card-wrapper card">
-      <a href="/posts/vue_pinia/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">pinia란</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                
-
-
-
-
-
-                <!-- pinia란
-Pinia는 Composition API 기반에서 동작하는 상태 관리자이다
-여태까지 Vue에서 사용되던 가장 보편적이고 유명한 상태 관리자는 Vuex였습니다.
-그런데 Vue의 개발자, Even You는 본인의 트위터에서 Vuex 5와 Pinia는 사실상 완전 동일한 프로젝트로 생각해야 한다고 말한 바 있습니다.
-
-Vuex 5에서 원하던 기... -->
-                pinia란
-Pinia는 Composition API 기반에서 동작하는 상태 관리자이다
-여태까지 Vue에서 사용되던 가장 보편적이고 유명한 상태 관리자는 Vuex였습니다.
-그런데 Vue의 개발자, Even You는 본인의 트위터에서 Vuex 5와 Pinia는 사실상 완전 동일한 프로젝트로 생각해야 한다고 말한 바 있습니다.
-
-Vuex 5에서 원하던 기...
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1707276780"
-  data-df="ll"
-  
->
-  Feb  7, 2024
-</time>
-
-
-                <!-- categories -->
-                
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                  Framework,
-                  Vue
+                  Typescript
                 </span>
                 
               </div>
@@ -1347,12 +1408,25 @@ Vuex 5에서 원하던 기...
       
 
       
+        <!-- hide number -->
+        
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
         <!-- show number -->
         <li class="page-item ">
           <a
             class="page-link"
-            href="/page10"
-          >10</a>
+            href="/page11"
+          >11</a>
         </li>
       
     
@@ -1360,7 +1434,7 @@ Vuex 5에서 원하던 기...
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>4</span>
-      <span class="text-muted">/ 10</span>
+      <span class="text-muted">/ 11</span>
     </li>
 
     <!-- right arrow -->
@@ -1397,21 +1471,6 @@ Vuex 5에서 원하던 기...
 
 
 
-
-  <section id="access-lastmod">
-    <h2 class="panel-heading">Recently Updated</h2>
-    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/usegit02/">Git(깃) 여러대 PC에서 동기화하는방법</a>
-        </li>
-      
-    </ul>
-  </section>
-  <!-- #access-lastmod -->
 
 
               <!-- The trending tags list -->
@@ -1564,196 +1623,6 @@ Vuex 5에서 원하던 기...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1857,10 +1726,61 @@ Vuex 5에서 원하던 기...
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1975,6 +1895,178 @@ Vuex 5에서 원하던 기...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2001,10 +2093,20 @@ Vuex 5에서 원하던 기...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -2108,13 +2210,13 @@ Vuex 5에서 원하던 기...
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">Javascript</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/vue/">Vue</a>
@@ -2329,196 +2431,6 @@ Vuex 5에서 원하던 기...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2622,10 +2534,61 @@ Vuex 5에서 원하던 기...
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2740,6 +2703,178 @@ Vuex 5에서 원하던 기...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2766,10 +2901,20 @@ Vuex 5에서 원하던 기...
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -2873,13 +3018,13 @@ Vuex 5에서 원하던 기...
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">Javascript</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/vue/">Vue</a>

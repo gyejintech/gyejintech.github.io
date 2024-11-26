@@ -4,7 +4,7 @@
   <id>http://0.0.0.0:4000/</id>
   <title>Jogyejin</title>
   <subtitle>기술블로그 &amp;&amp; 프로젝트공유</subtitle>
-  <updated>2024-08-02T22:15:14+09:00</updated>
+  <updated>2024-11-26T19:46:54+09:00</updated>
   <author>
     <name>Jogyejin</name>
     <uri>http://0.0.0.0:4000/</uri>
@@ -20,23 +20,23 @@
 
   
   <entry>
-    <title>Git(깃) 여러대 PC에서 동기화하는방법</title>
-    <link href="http://0.0.0.0:4000/posts/usegit02/" rel="alternate" type="text/html" title="Git(깃) 여러대 PC에서 동기화하는방법" />
-    <published>2024-06-30T12:33:00+09:00</published>
+    <title>CSS 레이아웃</title>
+    <link href="http://0.0.0.0:4000/posts/css_layout/" rel="alternate" type="text/html" title="CSS 레이아웃" />
+    <published>2024-09-04T12:33:00+09:00</published>
   
-    <updated>2024-07-09T21:26:22+09:00</updated>
+    <updated>2024-09-04T12:33:00+09:00</updated>
   
-    <id>http://0.0.0.0:4000/posts/usegit02/</id>
-    <content src="http://0.0.0.0:4000/posts/usegit02/" />
+    <id>http://0.0.0.0:4000/posts/css_layout/</id>
+    <content src="http://0.0.0.0:4000/posts/css_layout/" />
     <author>
       <name>Jogyejin</name>
     </author>
 
   
     
-    <category term="Utils" />
+    <category term="Develop" />
     
-    <category term="Git" />
+    <category term="Css" />
     
   
 
@@ -48,27 +48,28 @@
 
 
 
-      과정
-여러대의 PC가 존재하고 모든 PC는 하나의 레포지스터리를 바라보고 업데이트를 한다고 과정한다
-
-방법
-** PC에 Git 설치하는 방법과 레포지스터리 생성 방법은 생략 **
-
-Step01. 맨 처음 업로드하는 pc작업
+      
+  레이아웃(Layout)이란? : 구성 요소를 공간에 효과적으로 배열하는 일,  또는 그 기술
+웹 요소를 올바른 장소에 배치하는 기술을 말한다.
+CSS 레이아웃 기술은 형제 요소들을 가지런히 정렬할 수 있게 해주며 요소가 컨테이너 내부에 어떤 위치에 놓이게 될지 결정할 수 있다.
 
 
-# git 사용 계정 등록
-$git config --global user.name "gyejindev"
-$git config --global user.email "gyejin.dev@gmail.com"
+Flexbox
 
-# git에 반영할 폴더로 이동
-$cd myapp
+  플렉스박스는 행 또는 열을 주축으로 설정하여 웹 요소를 배치 및 정렬하는 1차원 레이아웃 방식을 말한다.
+요소의 배치와 정렬은 플렉스 컨테이너와 플렉스 아이템간의 상호작용을 통해 결정된다.
 
-#git 폴더 생성 및 초기화
-$git init
+  
+    플렉스 컨테이너 : 플렉스박스 방식으로 레이아웃을 결정할 요소
+    플렉스 아이템: 플렉스 컨테이너 내부에서 플렉스박스 방식으로 배치되는 요소 
+  
 
-#git 레포지스터리 연결(링크는 레포지스토리 생성하면 얻을 수 있는 git 링크)
-$git remote set-url origin https://계정이름@github.com/g...
+
+##
+
+Flexbox 기본 사용법
+
+Flex...
     </summary>
   
 
@@ -76,14 +77,118 @@ $git remote set-url origin https://계정이름@github.com/g...
 
   
   <entry>
-    <title>컴포넌트 분리한 todo 앱 만들기</title>
-    <link href="http://0.0.0.0:4000/posts/example_todo/" rel="alternate" type="text/html" title="컴포넌트 분리한 todo 앱 만들기" />
-    <published>2024-06-28T12:33:00+09:00</published>
+    <title>Javascript join 메서드</title>
+    <link href="http://0.0.0.0:4000/posts/javascript_join/" rel="alternate" type="text/html" title="Javascript join 메서드" />
+    <published>2024-09-01T12:33:00+09:00</published>
   
-    <updated>2024-06-28T12:33:00+09:00</updated>
+    <updated>2024-09-01T12:33:00+09:00</updated>
   
-    <id>http://0.0.0.0:4000/posts/example_todo/</id>
-    <content src="http://0.0.0.0:4000/posts/example_todo/" />
+    <id>http://0.0.0.0:4000/posts/javascript_join/</id>
+    <content src="http://0.0.0.0:4000/posts/javascript_join/" />
+    <author>
+      <name>Jogyejin</name>
+    </author>
+
+  
+    
+    <category term="Develop" />
+    
+    <category term="Javascript" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      join 메서드 이해하기
+
+
+  join 메서드는 배열 요소를 모두 연결해 하나의 문자열로 반환한다
+
+
+
+
+
+
+join 메서드 사용해보기
+let arr = ["안녕","자바스크립트","반가워"];
+
+console.log(arr.join()); // 출력: 안녕,자바스크립트,반가워
+console.log(arr.join("-")); // 출력: 안녕-자바스크립트-반가워
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Javascript includes 메서드</title>
+    <link href="http://0.0.0.0:4000/posts/javascript_includes/" rel="alternate" type="text/html" title="Javascript includes 메서드" />
+    <published>2024-09-01T12:33:00+09:00</published>
+  
+    <updated>2024-09-01T12:33:00+09:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/javascript_includes/</id>
+    <content src="http://0.0.0.0:4000/posts/javascript_includes/" />
+    <author>
+      <name>Jogyejin</name>
+    </author>
+
+  
+    
+    <category term="Develop" />
+    
+    <category term="Javascript" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      includes 메서드 이해하기
+
+
+  includes 메서드는 배열에 특정 요소가 있는지를 판단할 때 사용되는 메서드이다 배열에서 주어진 요소가 포함되어 있으면 true를 그렇지 않으면 false를 반환한다
+
+
+
+
+
+
+includes 메서드 사용해보기
+const arr = [1,2,3,4,5];
+
+console.log(arr.includes(3)); //출력 : true
+console.log(arr.includes(7)); //출력 : false
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>React Map 예제</title>
+    <link href="http://0.0.0.0:4000/posts/react_example_map/" rel="alternate" type="text/html" title="React Map 예제" />
+    <published>2024-08-01T12:33:00+09:00</published>
+  
+    <updated>2024-08-01T12:33:00+09:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/react_example_map/</id>
+    <content src="http://0.0.0.0:4000/posts/react_example_map/" />
     <author>
       <name>Jogyejin</name>
     </author>
@@ -104,34 +209,16 @@ $git remote set-url origin https://계정이름@github.com/g...
 
 
 
-      결과물
+      Map 함수 이해하기
+Map 함수는 React에서 제공하는 함수는 아니며 Javascript 언어에서 사용할 수 있는 함수이다.
+Map함수를 사용하면 콜백 함수를 이용해 각각의 배열 요소를 호출해서 그 값을 변환할 수 있게 해준다. 
+React예제로 Map을 확인하는 이유는 React에서 어떠한 데이터를 반복적으로 렌더링하거나 컴포넌트를 렌더링할 때 Map함수를 많이 사용함으로, 
+이번 예제를 통해 Map함수에대해 자세히 알아보도록 한다
 
+✏️리액트에서 동적인 배열을 렌더링해야 할 때는 자바스크립트 배열 내장함수인 map()을 사용하여 일반 데이터 배열을 리액트 엘리먼트로 이루어진 배열로 변환이 가능하다 실제로 리액트에서 배열은 게시글, 리스트, 피드를 표시하는데에 자주사용된다
 
-
-파일 구성
-
-
-  components 폴더 생성
-  components/Controller.js, viewers.js 파일 생성
-
-
-코드 작성
-
-App.js
-
-
-  App.js
-
-
-import "./styles.css";
-import Viewers from "./components/Viewers";
-import Controller from "./components/Controller";
-import { useState } from "react";
-
-export default function App() {
-  const [count, setCount] = useState(1);
-  const handleSetCount = (value) =&amp;gt; {
-    setCount(count + va...
+Map 함수 사용법
+a...
     </summary>
   
 
@@ -139,14 +226,14 @@ export default function App() {
 
   
   <entry>
-    <title>컴포넌트 분리한 카운터웹 만들기</title>
-    <link href="http://0.0.0.0:4000/posts/example_counter/" rel="alternate" type="text/html" title="컴포넌트 분리한 카운터웹 만들기" />
-    <published>2024-06-27T12:33:00+09:00</published>
+    <title>React Route</title>
+    <link href="http://0.0.0.0:4000/posts/react_Route/" rel="alternate" type="text/html" title="React Route" />
+    <published>2024-07-16T12:33:00+09:00</published>
   
-    <updated>2024-06-27T12:33:00+09:00</updated>
+    <updated>2024-07-16T12:33:00+09:00</updated>
   
-    <id>http://0.0.0.0:4000/posts/example_counter/</id>
-    <content src="http://0.0.0.0:4000/posts/example_counter/" />
+    <id>http://0.0.0.0:4000/posts/react_Route/</id>
+    <content src="http://0.0.0.0:4000/posts/react_Route/" />
     <author>
       <name>Jogyejin</name>
     </author>
@@ -167,148 +254,28 @@ export default function App() {
 
 
 
-      결과물
+      라우팅 이해하기
 
 
-
-파일 구성
-
-
-  components 폴더 생성
-  components/Controller.js, viewers.js 파일 생성
-
-
-코드 작성
-
-App.js
-
-
-  App.js
-
-
-import "./styles.css";
-import Viewers from "./components/Viewers";
-import Controller from "./components/Controller";
-import { useState } from "react";
-
-export default function App() {
-  const [count, setCount] = useState(1);
-  const handleSetCount = (value) =&amp;gt; {
-    setCount(count + va...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Step7 React Props와 구조분해, 스프레드 연산자</title>
-    <link href="http://0.0.0.0:4000/posts/react07/" rel="alternate" type="text/html" title="Step7 React Props와 구조분해, 스프레드 연산자" />
-    <published>2024-06-26T12:33:00+09:00</published>
-  
-    <updated>2024-06-26T12:33:00+09:00</updated>
-  
-    <id>http://0.0.0.0:4000/posts/react07/</id>
-    <content src="http://0.0.0.0:4000/posts/react07/" />
-    <author>
-      <name>Jogyejin</name>
-    </author>
-
-  
-    
-    <category term="Framework" />
-    
-    <category term="React" />
-    
-  
-
-  
-    <summary>
-      
+  라우팅이란 웹 서비스에있어서 페이지 이동을 수행시켜주는 기능이다 즉,
+사용자가 요청한 URL에 따라 해당 URL에 맞는 페이지로 이동 시켜서 보여주는 것이다 
+리액트의 라우팅 구현은 웹 페이지를 어디서 만드느냐에 따라 적절한 페이지를 반환하는 일련의 과정이며 서버 사이드 렌더링과, 클라이언트 사이드 렌더링으로 구분된다 리액트는 클라이언트 사이드 렌더링 방식을 채택하며 두 방식의 차이는 아래 SSR, CSR 를 이해하자
 
 
 
 
 
-      React Props와 구조분해
 
-
-  리액트에서는 부모가 자식 컴포넌트에 단인 객체 형태로 값을 전달할 수 있다.
-
-  이 객체를 리액트에서는 Props(Properties)라고 하며 Props는 Properties의 줄임말이다.
-
-
-Props를 사용해보기
-
-Props를 사용하기전에 먼저 CRA를 사용하여 기본 프로젝트를 생성 후 필요없는 부분은 삭제하고 Header  컴포넌트 하나를 생성하여 최상위  root컴포넌트인 App 컴포넌트에서 자식 Header 컴포넌트를 렌더링 하도록 한다
-
-
-
-(1) 사용하지 않는 파일 삭제
-
-
-  src/App.test.js
-  src/logo.svg
-  src/reportWebVitals.js
-  src/setupTest.js
-
-
-
-
-(2) App.js 파일 수정 ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Step6 useState와 useRef Hook</title>
-    <link href="http://0.0.0.0:4000/posts/react06/" rel="alternate" type="text/html" title="Step6 useState와 useRef Hook" />
-    <published>2024-06-25T12:33:00+09:00</published>
-  
-    <updated>2024-06-25T12:33:00+09:00</updated>
-  
-    <id>http://0.0.0.0:4000/posts/react06/</id>
-    <content src="http://0.0.0.0:4000/posts/react06/" />
-    <author>
-      <name>Jogyejin</name>
-    </author>
-
-  
-    
-    <category term="Framework" />
-    
-    <category term="React" />
-    
-  
-
-  
-    <summary>
-      
+리액트 라우터 이해하기
+라우팅을 위한 기능과 코드를 개발자 모두가 알 필요는 없다 리액트의 라우터라는 페이지 라우팅 전용 라이브러리를 사용하면 굳이 개발자가 구현하지 않아도 필요한 기능을 손쉽게 구현할 수 있다 
 
 
 
 
 
-      React Hook의 개념
+리액트 라우터 설치하기
 
-
-  Hook은 리액트 v16.8에 새로 도입된 기능으로서 함수형 컴포넌트에서도 상태 관리를 할 수 있는 useState 그리고 렌더링 직후 작업을 설정하는 useEffect 등의 기능들을 제공한다
-
-
-useState
-
-
-  가장 기본적인 Hook으로서 상태를 관리하기 위해 사용되는 Hook이다
-
-
-
-  함수형 컴포넌트 안에 state를 추가하여 사용한다
-  현재 상태를 나타내는 state값과 이 상태를 변경하는 setState값을 한 쌍으로 제공한다
-  state는 초기값을 설정할 수 있으며, 초기값은 첫 렌더링 때 한번 사용된다.
-  state는 객체일 필요 없이 문자열, 숫자, boolean, 배열, null, 객체 등의 여러가지 다양한 값을 넣을 수 있다.
-  use...
+npm ...
     </summary>
   
 

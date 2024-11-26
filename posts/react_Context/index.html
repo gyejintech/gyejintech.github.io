@@ -34,24 +34,24 @@
   
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Step6 useState와 useRef Hook" />
+<meta property="og:title" content="React Context" />
 <meta property="og:locale" content="ko" />
-<meta name="description" content="React Hook의 개념 Hook은 리액트 v16.8에 새로 도입된 기능으로서 함수형 컴포넌트에서도 상태 관리를 할 수 있는 useState 그리고 렌더링 직후 작업을 설정하는 useEffect 등의 기능들을 제공한다 useState 가장 기본적인 Hook으로서 상태를 관리하기 위해 사용되는 Hook이다 함수형 컴포넌트 안에 state를 추가하여 사용한다 현재 상태를 나타내는 state값과 이 상태를 변경하는 setState값을 한 쌍으로 제공한다 state는 초기값을 설정할 수 있으며, 초기값은 첫 렌더링 때 한번 사용된다. state는 객체일 필요 없이 문자열, 숫자, boolean, 배열, null, 객체 등의 여러가지 다양한 값을 넣을 수 있다. useState는 State 값이 바뀔때마다 재렌더링(컴포넌트 재호출)이 된다는 특성을 가지고 있다 1 2 3 4 5 6 7 8 9 10 11 12 import React, { useState } from &#39;react&#39;; const Counter = () =&gt; { const [value, setValue] = useState(0); return ( &lt;div&gt; &lt;p&gt; 현재 카운터 값은 {value}입니다. &lt;/p&gt; &lt;button onClick={() =&gt; setValue(value + 1)}&gt; +1 &lt;/button&gt; &lt;button onClick={() =&gt; setValue(value - 1)}&gt; -1 &lt;/button&gt; &lt;/div&gt; ); }; useRef 리액트에서 제공하는 Ref를 사용하면 돔(DOM) 요소들을 직접 조작할 수 있다 useRef를 사용하여 특정 DOM요소에 접근하여 값을 초기화할 수 있다 useRef를 사용하여 특정 DOM요소에 focus를 잡을 수 있다 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 import { useRef, useState } from &quot;react&quot;; function InputComponent() { const [text, setText] = useState(&quot;&quot;); const textRef = useRef(); const handleOnChange = (e) =&gt; { setText(e.target.value); }; const handleOnClick = () =&gt; { if (text.length &lt; 5) { alert(&quot;5글자보다 커야합니다&quot;); textRef.current.focus(); } else { alert(text); textRef.current.value = &quot;&quot;; } }; return ( &lt;div&gt; &lt;input ref={textRef} value={text} onChange={handleOnChange} /&gt; &lt;button onClick={handleOnClick}&gt;완료&lt;/button&gt; &lt;p&gt;{text}&lt;/p&gt; &lt;/div&gt; ); } export default InputComponent;" />
-<meta property="og:description" content="React Hook의 개념 Hook은 리액트 v16.8에 새로 도입된 기능으로서 함수형 컴포넌트에서도 상태 관리를 할 수 있는 useState 그리고 렌더링 직후 작업을 설정하는 useEffect 등의 기능들을 제공한다 useState 가장 기본적인 Hook으로서 상태를 관리하기 위해 사용되는 Hook이다 함수형 컴포넌트 안에 state를 추가하여 사용한다 현재 상태를 나타내는 state값과 이 상태를 변경하는 setState값을 한 쌍으로 제공한다 state는 초기값을 설정할 수 있으며, 초기값은 첫 렌더링 때 한번 사용된다. state는 객체일 필요 없이 문자열, 숫자, boolean, 배열, null, 객체 등의 여러가지 다양한 값을 넣을 수 있다. useState는 State 값이 바뀔때마다 재렌더링(컴포넌트 재호출)이 된다는 특성을 가지고 있다 1 2 3 4 5 6 7 8 9 10 11 12 import React, { useState } from &#39;react&#39;; const Counter = () =&gt; { const [value, setValue] = useState(0); return ( &lt;div&gt; &lt;p&gt; 현재 카운터 값은 {value}입니다. &lt;/p&gt; &lt;button onClick={() =&gt; setValue(value + 1)}&gt; +1 &lt;/button&gt; &lt;button onClick={() =&gt; setValue(value - 1)}&gt; -1 &lt;/button&gt; &lt;/div&gt; ); }; useRef 리액트에서 제공하는 Ref를 사용하면 돔(DOM) 요소들을 직접 조작할 수 있다 useRef를 사용하여 특정 DOM요소에 접근하여 값을 초기화할 수 있다 useRef를 사용하여 특정 DOM요소에 focus를 잡을 수 있다 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 import { useRef, useState } from &quot;react&quot;; function InputComponent() { const [text, setText] = useState(&quot;&quot;); const textRef = useRef(); const handleOnChange = (e) =&gt; { setText(e.target.value); }; const handleOnClick = () =&gt; { if (text.length &lt; 5) { alert(&quot;5글자보다 커야합니다&quot;); textRef.current.focus(); } else { alert(text); textRef.current.value = &quot;&quot;; } }; return ( &lt;div&gt; &lt;input ref={textRef} value={text} onChange={handleOnChange} /&gt; &lt;button onClick={handleOnClick}&gt;완료&lt;/button&gt; &lt;p&gt;{text}&lt;/p&gt; &lt;/div&gt; ); } export default InputComponent;" />
-<link rel="canonical" href="http://0.0.0.0:4000/posts/react06/" />
-<meta property="og:url" content="http://0.0.0.0:4000/posts/react06/" />
+<meta name="description" content="Context 이해하기 Context란 리액트 컴포넌트의 트리 전체를 대상으로 데이터를 공급하는 기능이다 컴포넌트 간에 데이터를 전달하는 방법중에 Props를 사용하여 전달할 수 있지만 Props는 컴포넌트 트리에서 언제나 부모에서 자식으로 단방향으로 전달되어진다. 리액트에서는 자식의 자식, 즉 트리에서 2단계 이상 떨어져 있는 컴포넌트에 직접 데이터를 전달하는것은 불가능하다 그러면 A컴포넌트 밑에 B컴포넌트가 있고 B컴포넌트 밑에 C, D컴포넌트가 존재한다고 과정했을 때, A컴포넌트가 C,D컴포넌트에 데이터를 전달하려면 어떻게해야 할까? B컴포넌트에 전달하고 B컴포넌트에서 다시 C,D로 뿌려줘야한다 이것을 마치 드릴로 땅을 파고 내려가는 것과 같다해서 Props Drilling문제라고 불린다. 이를 해결하는 방법이 바로 Context이다 context를 이용하면 단계마다 일일이 props를 전달하지 않고도, 컴포넌트 트리 전역에 데이터를 공급할 수 있다 ContextAPI란 Context를 만들고 다루는 리액트의 기능이다 사용법 Context를 생성시 반드시 컴포넌트 밖에서 생성해야 한다 만약 안에서 생성하게되면 해당 컴포넌트가 리렌더될 때마다 Context를 새롭게 생성하여 의도처럼 되지 않는다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 // ContextAPI에서 새 Context를 만드는 createContext 기능을 사용하기 위해서는 react 라이브러리의 React 객체를 불러와야 한다 import React, {useContext} from &#39;react&#39;; // createContext 메서드를 호출해 새로운 Context를 만든다, 인수로 전달하는 값은 Context의 기본값으로 생략가능하다 const MyContext = React.createContext(defaultValue); // Context.Provider는 Context 객체에 기본으로 포함된 컴포넌트이다 // 위에서 생성한 MyContext의 Provider를 App컴포넌트의 자식으로 배치한 후 해당 Provider 밑으로 데이터를 공유하고자하는 자식 컴포넌트들을 배치함으로써 Props를 전달할 수 있다 // Props로 전달할 값들을 하기 예제처럼 Provider를 배치할때 value값으로 전달해두면 된다. // useContext를 이용하면 자신이 속한 그룹의 Contex가 제공하는 값을 불러올 수 있다 // 만약 useContext를 호출한 컴포넌트가 인수로 전달한 Context 그룹에 속해 있지 않으면 오류가 발생한다. function App() { const data = &#39;data&#39;; return ( &lt;div&gt; &lt;Header/&gt; &lt;MyContext.Provider value={data}&gt; &lt;Body/&gt; &lt;/MyContext.Provider&gt; &lt;/div&gt; ); } function Body () { // useContext를 호출하고 인수로 값을 공급할 Context를 전달한 후 함수 useContext는 해당 Context가 공급하는 값을 반환한다 반환한 값을 변수 data에 저장한다 const data = useContext(MyContext); }" />
+<meta property="og:description" content="Context 이해하기 Context란 리액트 컴포넌트의 트리 전체를 대상으로 데이터를 공급하는 기능이다 컴포넌트 간에 데이터를 전달하는 방법중에 Props를 사용하여 전달할 수 있지만 Props는 컴포넌트 트리에서 언제나 부모에서 자식으로 단방향으로 전달되어진다. 리액트에서는 자식의 자식, 즉 트리에서 2단계 이상 떨어져 있는 컴포넌트에 직접 데이터를 전달하는것은 불가능하다 그러면 A컴포넌트 밑에 B컴포넌트가 있고 B컴포넌트 밑에 C, D컴포넌트가 존재한다고 과정했을 때, A컴포넌트가 C,D컴포넌트에 데이터를 전달하려면 어떻게해야 할까? B컴포넌트에 전달하고 B컴포넌트에서 다시 C,D로 뿌려줘야한다 이것을 마치 드릴로 땅을 파고 내려가는 것과 같다해서 Props Drilling문제라고 불린다. 이를 해결하는 방법이 바로 Context이다 context를 이용하면 단계마다 일일이 props를 전달하지 않고도, 컴포넌트 트리 전역에 데이터를 공급할 수 있다 ContextAPI란 Context를 만들고 다루는 리액트의 기능이다 사용법 Context를 생성시 반드시 컴포넌트 밖에서 생성해야 한다 만약 안에서 생성하게되면 해당 컴포넌트가 리렌더될 때마다 Context를 새롭게 생성하여 의도처럼 되지 않는다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 // ContextAPI에서 새 Context를 만드는 createContext 기능을 사용하기 위해서는 react 라이브러리의 React 객체를 불러와야 한다 import React, {useContext} from &#39;react&#39;; // createContext 메서드를 호출해 새로운 Context를 만든다, 인수로 전달하는 값은 Context의 기본값으로 생략가능하다 const MyContext = React.createContext(defaultValue); // Context.Provider는 Context 객체에 기본으로 포함된 컴포넌트이다 // 위에서 생성한 MyContext의 Provider를 App컴포넌트의 자식으로 배치한 후 해당 Provider 밑으로 데이터를 공유하고자하는 자식 컴포넌트들을 배치함으로써 Props를 전달할 수 있다 // Props로 전달할 값들을 하기 예제처럼 Provider를 배치할때 value값으로 전달해두면 된다. // useContext를 이용하면 자신이 속한 그룹의 Contex가 제공하는 값을 불러올 수 있다 // 만약 useContext를 호출한 컴포넌트가 인수로 전달한 Context 그룹에 속해 있지 않으면 오류가 발생한다. function App() { const data = &#39;data&#39;; return ( &lt;div&gt; &lt;Header/&gt; &lt;MyContext.Provider value={data}&gt; &lt;Body/&gt; &lt;/MyContext.Provider&gt; &lt;/div&gt; ); } function Body () { // useContext를 호출하고 인수로 값을 공급할 Context를 전달한 후 함수 useContext는 해당 Context가 공급하는 값을 반환한다 반환한 값을 변수 data에 저장한다 const data = useContext(MyContext); }" />
+<link rel="canonical" href="http://0.0.0.0:4000/posts/react_Context/" />
+<meta property="og:url" content="http://0.0.0.0:4000/posts/react_Context/" />
 <meta property="og:site_name" content="Jogyejin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-06-25T12:33:00+09:00" />
+<meta property="article:published_time" content="2024-07-16T12:33:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Step6 useState와 useRef Hook" />
+<meta property="twitter:title" content="React Context" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-06-25T12:33:00+09:00","datePublished":"2024-06-25T12:33:00+09:00","description":"React Hook의 개념 Hook은 리액트 v16.8에 새로 도입된 기능으로서 함수형 컴포넌트에서도 상태 관리를 할 수 있는 useState 그리고 렌더링 직후 작업을 설정하는 useEffect 등의 기능들을 제공한다 useState 가장 기본적인 Hook으로서 상태를 관리하기 위해 사용되는 Hook이다 함수형 컴포넌트 안에 state를 추가하여 사용한다 현재 상태를 나타내는 state값과 이 상태를 변경하는 setState값을 한 쌍으로 제공한다 state는 초기값을 설정할 수 있으며, 초기값은 첫 렌더링 때 한번 사용된다. state는 객체일 필요 없이 문자열, 숫자, boolean, 배열, null, 객체 등의 여러가지 다양한 값을 넣을 수 있다. useState는 State 값이 바뀔때마다 재렌더링(컴포넌트 재호출)이 된다는 특성을 가지고 있다 1 2 3 4 5 6 7 8 9 10 11 12 import React, { useState } from &#39;react&#39;; const Counter = () =&gt; { const [value, setValue] = useState(0); return ( &lt;div&gt; &lt;p&gt; 현재 카운터 값은 {value}입니다. &lt;/p&gt; &lt;button onClick={() =&gt; setValue(value + 1)}&gt; +1 &lt;/button&gt; &lt;button onClick={() =&gt; setValue(value - 1)}&gt; -1 &lt;/button&gt; &lt;/div&gt; ); }; useRef 리액트에서 제공하는 Ref를 사용하면 돔(DOM) 요소들을 직접 조작할 수 있다 useRef를 사용하여 특정 DOM요소에 접근하여 값을 초기화할 수 있다 useRef를 사용하여 특정 DOM요소에 focus를 잡을 수 있다 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 import { useRef, useState } from &quot;react&quot;; function InputComponent() { const [text, setText] = useState(&quot;&quot;); const textRef = useRef(); const handleOnChange = (e) =&gt; { setText(e.target.value); }; const handleOnClick = () =&gt; { if (text.length &lt; 5) { alert(&quot;5글자보다 커야합니다&quot;); textRef.current.focus(); } else { alert(text); textRef.current.value = &quot;&quot;; } }; return ( &lt;div&gt; &lt;input ref={textRef} value={text} onChange={handleOnChange} /&gt; &lt;button onClick={handleOnClick}&gt;완료&lt;/button&gt; &lt;p&gt;{text}&lt;/p&gt; &lt;/div&gt; ); } export default InputComponent;","headline":"Step6 useState와 useRef Hook","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/posts/react06/"},"url":"http://0.0.0.0:4000/posts/react06/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-16T12:33:00+09:00","datePublished":"2024-07-16T12:33:00+09:00","description":"Context 이해하기 Context란 리액트 컴포넌트의 트리 전체를 대상으로 데이터를 공급하는 기능이다 컴포넌트 간에 데이터를 전달하는 방법중에 Props를 사용하여 전달할 수 있지만 Props는 컴포넌트 트리에서 언제나 부모에서 자식으로 단방향으로 전달되어진다. 리액트에서는 자식의 자식, 즉 트리에서 2단계 이상 떨어져 있는 컴포넌트에 직접 데이터를 전달하는것은 불가능하다 그러면 A컴포넌트 밑에 B컴포넌트가 있고 B컴포넌트 밑에 C, D컴포넌트가 존재한다고 과정했을 때, A컴포넌트가 C,D컴포넌트에 데이터를 전달하려면 어떻게해야 할까? B컴포넌트에 전달하고 B컴포넌트에서 다시 C,D로 뿌려줘야한다 이것을 마치 드릴로 땅을 파고 내려가는 것과 같다해서 Props Drilling문제라고 불린다. 이를 해결하는 방법이 바로 Context이다 context를 이용하면 단계마다 일일이 props를 전달하지 않고도, 컴포넌트 트리 전역에 데이터를 공급할 수 있다 ContextAPI란 Context를 만들고 다루는 리액트의 기능이다 사용법 Context를 생성시 반드시 컴포넌트 밖에서 생성해야 한다 만약 안에서 생성하게되면 해당 컴포넌트가 리렌더될 때마다 Context를 새롭게 생성하여 의도처럼 되지 않는다. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 // ContextAPI에서 새 Context를 만드는 createContext 기능을 사용하기 위해서는 react 라이브러리의 React 객체를 불러와야 한다 import React, {useContext} from &#39;react&#39;; // createContext 메서드를 호출해 새로운 Context를 만든다, 인수로 전달하는 값은 Context의 기본값으로 생략가능하다 const MyContext = React.createContext(defaultValue); // Context.Provider는 Context 객체에 기본으로 포함된 컴포넌트이다 // 위에서 생성한 MyContext의 Provider를 App컴포넌트의 자식으로 배치한 후 해당 Provider 밑으로 데이터를 공유하고자하는 자식 컴포넌트들을 배치함으로써 Props를 전달할 수 있다 // Props로 전달할 값들을 하기 예제처럼 Provider를 배치할때 value값으로 전달해두면 된다. // useContext를 이용하면 자신이 속한 그룹의 Contex가 제공하는 값을 불러올 수 있다 // 만약 useContext를 호출한 컴포넌트가 인수로 전달한 Context 그룹에 속해 있지 않으면 오류가 발생한다. function App() { const data = &#39;data&#39;; return ( &lt;div&gt; &lt;Header/&gt; &lt;MyContext.Provider value={data}&gt; &lt;Body/&gt; &lt;/MyContext.Provider&gt; &lt;/div&gt; ); } function Body () { // useContext를 호출하고 인수로 값을 공급할 Context를 전달한 후 함수 useContext는 해당 Context가 공급하는 값을 반환한다 반환한 값을 변수 data에 저장한다 const data = useContext(MyContext); }","headline":"React Context","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/posts/react_Context/"},"url":"http://0.0.0.0:4000/posts/react_Context/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Step6 useState와 useRef Hook | Jogyejin
+  <title>React Context | Jogyejin
   </title>
 
   <!--
@@ -248,7 +248,7 @@
         
           
             
-              <span>Step6 useState와 useRef Hook</span>
+              <span>React Context</span>
             
 
           
@@ -316,109 +316,6 @@
 
 
 
-  
-  
-
-  <!-- CDN URL -->
-  
-
-  <!-- Add image path -->
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-    
-
-    
-
-    
-      
-    
-
-    <!-- lazy-load images -->
-    
-
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
-
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-
-  
-
 
 <!-- Add header for code snippets -->
 
@@ -441,17 +338,6 @@
       
         
         
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
       
 
       
@@ -503,7 +389,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Step6 useState와 useRef Hook</h1>
+    <h1 data-toc-skip>React Context</h1>
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -519,13 +405,13 @@
 
 <time
   
-  data-ts="1719286380"
+  data-ts="1721100780"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Jun 25, 2024
+  Jul 16, 2024
 </time>
 
       </span>
@@ -570,9 +456,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="499 words"
+  title="799 words"
 >
-  <em>2 min</em> read</span>
+  <em>4 min</em> read</span>
 
       </div>
       <!-- .d-flex -->
@@ -581,71 +467,32 @@
   </header>
 
   <div class="content">
-    <h2 id="react-hook의-개념"><span class="me-2">React Hook의 개념</span><a href="#react-hook의-개념" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="context-이해하기"><span class="me-2">Context 이해하기</span><a href="#context-이해하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<blockquote>
-  <p>Hook은 리액트 v16.8에 새로 도입된 기능으로서 함수형 컴포넌트에서도 상태 관리를 할 수 있는 useState 그리고 렌더링 직후 작업을 설정하는 useEffect 등의 기능들을 제공한다</p>
+<blockquote class="prompt-tip">
+  <p>Context란 리액트 컴포넌트의 트리 전체를 대상으로 데이터를 공급하는 기능이다</p>
 </blockquote>
 
-<h2 id="usestate"><span class="me-2">useState</span><a href="#usestate" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>컴포넌트 간에 데이터를 전달하는 방법중에 Props를 사용하여 전달할 수 있지만<br />
+Props는 컴포넌트 트리에서 언제나 부모에서 자식으로 단방향으로 전달되어진다. <br />
+리액트에서는 자식의 자식, 즉 트리에서 2단계 이상 떨어져 있는 컴포넌트에 직접 데이터를 전달하는것은 불가능하다<br />
+그러면 A컴포넌트 밑에 B컴포넌트가 있고 B컴포넌트 밑에 C, D컴포넌트가 존재한다고 과정했을 때,<br />
+A컴포넌트가 C,D컴포넌트에 데이터를 전달하려면 어떻게해야 할까?<br />
+B컴포넌트에 전달하고 B컴포넌트에서 다시 C,D로 뿌려줘야한다 <br />
+이것을 마치 드릴로 땅을 파고 내려가는 것과 같다해서 Props Drilling문제라고 불린다.<br />
+이를 해결하는 방법이 바로 Context이다 context를 이용하면 단계마다 일일이 props를 전달하지 않고도,<br />
+컴포넌트 트리 전역에 데이터를 공급할 수 있다</p>
 
-<blockquote>
-  <p>가장 기본적인 Hook으로서 상태를 관리하기 위해 사용되는 Hook이다</p>
+<blockquote class="prompt-tip">
+  <p>ContextAPI란 Context를 만들고 다루는 리액트의 기능이다</p>
 </blockquote>
 
-<ul>
-  <li>함수형 컴포넌트 안에 state를 추가하여 사용한다</li>
-  <li>현재 상태를 나타내는 state값과 이 상태를 변경하는 setState값을 한 쌍으로 제공한다</li>
-  <li>state는 초기값을 설정할 수 있으며, 초기값은 첫 렌더링 때 한번 사용된다.</li>
-  <li>state는 객체일 필요 없이 문자열, 숫자, boolean, 배열, null, 객체 등의 여러가지 다양한 값을 넣을 수 있다.</li>
-  <li>useState는 State 값이 바뀔때마다 재렌더링(컴포넌트 재호출)이 된다는 특성을 가지고 있다</li>
-</ul>
-
+<p><br /></p>
 <hr />
 
-<p><a href="/assets/data/React/react_state_01.png" class="popup img-link  shimmer"><img data-action="zoom" src="/assets/data/React/react_state_01.png" alt="absolute" height="280" width="600" loading="lazy"></a></p>
-
-<hr />
-
-<div class="language-javascript highlighter-rouge"><div class="code-header">
-        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">Counter</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-	<span class="kd">const</span> <span class="p">[</span><span class="nx">value</span><span class="p">,</span> <span class="nx">setValue</span><span class="p">]</span> <span class="o">=</span> <span class="nf">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="k">return </span><span class="p">(</span>
-    	<span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-        	<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span> <span class="nx">현재</span> <span class="nx">카운터</span> <span class="nx">값은</span> <span class="p">{</span><span class="nx">value</span><span class="p">}</span><span class="nx">입니다</span><span class="p">.</span> <span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
-</span>            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nf">setValue</span><span class="p">(</span><span class="nx">value</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)}</span><span class="o">&gt;</span> <span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nf">setValue</span><span class="p">(</span><span class="nx">value</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)}</span><span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>    <span class="p">);</span>
-<span class="p">};</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h2 id="useref"><span class="me-2">useRef</span><a href="#useref" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<blockquote>
-  <p>리액트에서 제공하는 Ref를 사용하면 돔(DOM) 요소들을 직접 조작할 수 있다</p>
-</blockquote>
-
-<ul>
-  <li>useRef를 사용하여 특정 DOM요소에 접근하여 값을 초기화할 수 있다</li>
-  <li>useRef를 사용하여 특정 DOM요소에 focus를 잡을 수 있다</li>
-</ul>
-
+<h2 id="사용법"><span class="me-2">사용법</span><a href="#사용법" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p><span style="color: #f0edcc; background-color: #02343f;">Context를 생성시 반드시 컴포넌트 밖에서 생성해야 한다 만약 안에서 생성하게되면 해당 컴포넌트가 리렌더될 때마다 Context를 새롭게 생성하여 의도처럼 되지 않는다.</span>
+<br /></p>
 <div class="language-javascript highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -674,42 +521,33 @@
 24
 25
 26
-27
-28
-29
-30
-</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">useRef</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
+</pre></td><td class="rouge-code"><pre><span class="c1">// ContextAPI에서 새 Context를 만드는 createContext 기능을 사용하기 위해서는 react 라이브러리의 React 객체를 불러와야 한다 </span>
+<span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">useContext</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// createContext 메서드를 호출해 새로운 Context를 만든다, 인수로 전달하는 값은 Context의 기본값으로 생략가능하다</span>
+<span class="kd">const</span> <span class="nx">MyContext</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nf">createContext</span><span class="p">(</span><span class="nx">defaultValue</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nf">InputComponent</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="p">[</span><span class="nx">text</span><span class="p">,</span> <span class="nx">setText</span><span class="p">]</span> <span class="o">=</span> <span class="nf">useState</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
-  <span class="kd">const</span> <span class="nx">textRef</span> <span class="o">=</span> <span class="nf">useRef</span><span class="p">();</span>
+<span class="c1">// Context.Provider는 Context 객체에 기본으로 포함된 컴포넌트이다</span>
+<span class="c1">// 위에서 생성한 MyContext의 Provider를 App컴포넌트의 자식으로 배치한 후 해당 Provider 밑으로 데이터를 공유하고자하는 자식 컴포넌트들을 배치함으로써 Props를 전달할 수 있다 </span>
+<span class="c1">// Props로 전달할 값들을 하기 예제처럼 Provider를 배치할때 value값으로 전달해두면 된다.</span>
 
-  <span class="kd">const</span> <span class="nx">handleOnChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nf">setText</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-  <span class="p">};</span>
-  <span class="kd">const</span> <span class="nx">handleOnClick</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">if </span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nf">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">5글자보다 커야합니다</span><span class="dl">"</span><span class="p">);</span>
-      <span class="nx">textRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nf">focus</span><span class="p">();</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nf">alert</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-      <span class="nx">textRef</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">};</span>
-
-  <span class="k">return </span><span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">textRef</span><span class="p">}</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">handleOnChange</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
-</span>      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleOnClick</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">완료</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
-</span>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
-</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
-</span>  <span class="p">);</span>
+<span class="c1">// useContext를 이용하면 자신이 속한 그룹의 Contex가 제공하는 값을 불러올 수 있다</span>
+<span class="c1">// 만약 useContext를 호출한 컴포넌트가 인수로 전달한 Context 그룹에 속해 있지 않으면 오류가 발생한다.</span>
+<span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">data</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">return </span><span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Header</span><span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">MyContext</span><span class="p">.</span><span class="nx">Provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">Body</span><span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="sr">/MyContext.Provider</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">);</span>
+   <span class="p">}</span>
+<span class="kd">function</span> <span class="nf">Body</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// useContext를 호출하고 인수로 값을 공급할 Context를 전달한 후 함수 useContext는 해당 Context가 공급하는 값을 반환한다 반환한 값을 변수 data에 저장한다 </span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nf">useContext</span><span class="p">(</span><span class="nx">MyContext</span><span class="p">);</span>
 <span class="p">}</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="nx">InputComponent</span><span class="p">;</span>
-
 </pre></td></tr></tbody></table></code></div></div>
-
 
   </div>
 
@@ -786,7 +624,6 @@
   <!-- div.post-tail-wrapper -->
 </article>
 
-
             
           </main>
 
@@ -807,21 +644,6 @@
 
 
 
-
-  <section id="access-lastmod">
-    <h2 class="panel-heading">Recently Updated</h2>
-    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/usegit02/">Git(깃) 여러대 PC에서 동기화하는방법</a>
-        </li>
-      
-    </ul>
-  </section>
-  <!-- #access-lastmod -->
 
 
               <!-- The trending tags list -->
@@ -974,196 +796,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1267,10 +899,61 @@
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1385,6 +1068,178 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1411,10 +1266,20 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -1518,13 +1383,13 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">Javascript</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/vue/">Vue</a>
@@ -1624,19 +1489,91 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -2000,7 +1937,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/react01/" class="post-preview card h-100">
+          <a href="/posts/react_useState_useRef/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2012,14 +1949,14 @@
 
 <time
   
-  data-ts="1714534380"
+  data-ts="1719286380"
   data-df="ll"
   
 >
-  May  1, 2024
+  Jun 25, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Step1 React란</h4>
+              <h4 class="pt-0 my-2">useState와 useRef Hook</h4>
               <div class="text-muted">
                 <p>
                   
@@ -2028,15 +1965,20 @@
 
 
 
-                  React란
-
-React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브러리이며 컴포넌트라는 작은 조각들로 UI를 구성한다 또한 Virtual Dom이라는 개념을 사용하여 성능을 최적화한다
-
-주요 특징
+                  React Hook의 개념
 
 
-  
-    가독성과 유지보수성: JSX 문법을 사용하여 컴포넌트 기반으로 UI를 작성할 수 있으므로 가독성이 높고 유지보수가 용이하며 각 컴포...
+  Hook은 리액트 v16.8에 새로 도입된 기능으로서 함수형 컴포넌트에서도 상태 관리를 할 수 있는 useState 그리고 렌더링 직후 작업을 설정하는 useEffect 등의 기능들을 제공한다
+
+
+useState
+
+
+  가장 기본적인 Hook으로서 상태를 관리하기 위해 사용되는 Hook이다
+
+
+
+  함수형 컴포넌트 안...
                 </p>
               </div>
             </div>
@@ -2044,7 +1986,7 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
         </article>
       
         <article class="col">
-          <a href="/posts/react02/" class="post-preview card h-100">
+          <a href="/posts/react_props/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2056,14 +1998,14 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
 
 <time
   
-  data-ts="1714793580"
+  data-ts="1719372780"
   data-df="ll"
   
 >
-  May  4, 2024
+  Jun 26, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Step2 React 개발환경 설정 방법</h4>
+              <h4 class="pt-0 my-2">React Props와 구조분해, 스프레드 연산자</h4>
               <div class="text-muted">
                 <p>
                   
@@ -2072,13 +2014,17 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
 
 
 
-                  이번에는 리액트 앱을 직접 만들고 어떻게 사용하는지를 확인해본다
+                  React Props와 구조분해
 
-Create React App으로 리액트 앱 만들기
 
-리액트 앱은 처음 만들 때 꽤 복잡한 설정을 직접 해주어야 한다. Node.js를 많이 사용해본 사람에게는 쉬울 수 있지만 입문자에게는 꽤나 큰 장벽이다
+  리액트에서는 부모가 자식 컴포넌트에 단인 객체 형태로 값을 전달할 수 있다.
 
-따라서 리액트 앱을 만들기 위해 Create React App이라는 Node....
+  이 객체를 리액트에서는 Props(Properties)라고 하며 Props는 Properties의 줄임말이다.
+
+
+Props를 사용해보기
+
+Props를 사용하기전에 먼저 CRA를 사용하여 기본 프로젝트를 생성 후 필요없는 부분은 삭...
                 </p>
               </div>
             </div>
@@ -2086,7 +2032,7 @@ Create React App으로 리액트 앱 만들기
         </article>
       
         <article class="col">
-          <a href="/posts/react0201/" class="post-preview card h-100">
+          <a href="/posts/react_example_counter/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2098,14 +2044,14 @@ Create React App으로 리액트 앱 만들기
 
 <time
   
-  data-ts="1714793580"
+  data-ts="1719459180"
   data-df="ll"
   
 >
-  May  4, 2024
+  Jun 27, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Step2-1 React 기본폴더 및 파일구성</h4>
+              <h4 class="pt-0 my-2">컴포넌트 분리한 카운터웹 만들기</h4>
               <div class="text-muted">
                 <p>
                   
@@ -2114,16 +2060,28 @@ Create React App으로 리액트 앱 만들기
 
 
 
-                  이번에는 리액트 앱을 CRA(Create React App)으로 생성 후 만들어지는 파일과 폴더의 구성에 대해 작성해본다
+                  결과물
 
 
 
+파일 구성
 
-  
-    package.json 파일 : 해당 프로젝트의 앱에 어떤 라이브러리가 설치되어있는지, 리액트 버전은 몇 버전인지 등에  대한 정보를 알 수 있다
-  
-  
-    public 폴더 : 리액트에서 공용으로 사용하...
+
+  components 폴더 생성
+  components/Controller.js, viewers.js 파일 생성
+
+
+코드 작성
+
+App.js
+
+
+  App.js
+
+
+import &quot;./styles.css&quot;;
+import Viewers from &quot;./components/Viewers&quot;;
+import Controller from...
                 </p>
               </div>
             </div>
@@ -2145,21 +2103,21 @@ Create React App으로 리액트 앱 만들기
 
   
     <a
-      href="/posts/gitblog01/"
+      href="/posts/react_useMemo/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Git블로그 만들기 (jekyll)</p>
+      <p>React useMemo</p>
     </a>
   
 
   
     <a
-      href="/posts/react07/"
+      href="/posts/react_Route/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Step7 React Props와 구조분해, 스프레드 연산자</p>
+      <p>React Route</p>
     </a>
   
 </nav>
@@ -2416,196 +2374,6 @@ Create React App으로 리액트 앱 만들기
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2709,10 +2477,61 @@ Create React App으로 리액트 앱 만들기
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2827,6 +2646,178 @@ Create React App으로 리액트 앱 만들기
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2853,10 +2844,20 @@ Create React App으로 리액트 앱 만들기
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -2960,13 +2961,13 @@ Create React App으로 리액트 앱 만들기
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">Javascript</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/vue/">Vue</a>

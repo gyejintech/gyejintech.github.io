@@ -34,24 +34,24 @@
   
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Step4 React Components" />
+<meta property="og:title" content="Javascript API" />
 <meta property="og:locale" content="ko" />
-<meta name="description" content="Component 개요 React는 모든 페이지가 Component로 구성되어있고 하나의 Component는 여러개의 Component로 구성될 수 있다 (블록을 생각하면 이해하기 쉽다) Component는 JavaScript함수와 유사하며 Props라고 하는 임의의 값을 받은 후 화면에 어떻게 표시되는지를 기술하는 React Element를 반환한다 Component 생성 1 2 3 function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } 위 함수는 Props 객체 인자를 받은 후 React Element를 return 즉 반환하는 컴포넌트이다 이러한 컴포넌트는 JavaScript 함수이기 때문에 말 그대로 함수 컴포넌트라고도 호칭한다 최근에 나온 ES6 Class를 사용해서도 컴포넌트를 정의할 수 있다 1 2 3 4 5 class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } } Component 렌더링 예시 1 2 3 4 5 6 7 8 9 10 11 12 function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const root = ReactDOM.createRoot(document.getElementById(&#39;root&#39;)); // &lt;Welcome name=&quot;Sara&quot; /&gt; 엘리먼트로 root.render()를 호출합니다. // React는 {name: &#39;Sara&#39;}를 props로 하여 Welcome 컴포넌트를 호출합니다. const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; // Welcome 컴포넌트는 결과적으로 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트를 반환합니다. root.render(element); // React DOM은 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트와 일치하도록 DOM을 효율적으로 업데이트합니다." />
-<meta property="og:description" content="Component 개요 React는 모든 페이지가 Component로 구성되어있고 하나의 Component는 여러개의 Component로 구성될 수 있다 (블록을 생각하면 이해하기 쉽다) Component는 JavaScript함수와 유사하며 Props라고 하는 임의의 값을 받은 후 화면에 어떻게 표시되는지를 기술하는 React Element를 반환한다 Component 생성 1 2 3 function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } 위 함수는 Props 객체 인자를 받은 후 React Element를 return 즉 반환하는 컴포넌트이다 이러한 컴포넌트는 JavaScript 함수이기 때문에 말 그대로 함수 컴포넌트라고도 호칭한다 최근에 나온 ES6 Class를 사용해서도 컴포넌트를 정의할 수 있다 1 2 3 4 5 class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } } Component 렌더링 예시 1 2 3 4 5 6 7 8 9 10 11 12 function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const root = ReactDOM.createRoot(document.getElementById(&#39;root&#39;)); // &lt;Welcome name=&quot;Sara&quot; /&gt; 엘리먼트로 root.render()를 호출합니다. // React는 {name: &#39;Sara&#39;}를 props로 하여 Welcome 컴포넌트를 호출합니다. const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; // Welcome 컴포넌트는 결과적으로 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트를 반환합니다. root.render(element); // React DOM은 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트와 일치하도록 DOM을 효율적으로 업데이트합니다." />
-<link rel="canonical" href="http://0.0.0.0:4000/posts/react04/" />
-<meta property="og:url" content="http://0.0.0.0:4000/posts/react04/" />
+<meta name="description" content="API란 Application Programming Interface(애플리케이션 프로그램 인터페이스)의 약자로, 소프트웨어 응용 프로그램에서 다른 소프트웨어 구성 요소 또는 서비스와 상호 작용하기 위한 인터페이스를 제공하는 프로그래밍 기술이다 EX) 약국에 두통약을 사러갔다고 과정했을때 우리는 약사에게 어떤 약을 달라고 요청을하게되고 약사는 그 요청에 따라 약을 찾아서 약을 건네주는 응답을 한다. 우리는 위처럼 요청하는 프로그램이고 약사는 요청에 따른 약(데이터)을 찾아서 응답해주는 API와 동일하다. API의 종류 Ajax Ajax(Asynchronous JavaScript And XML)의 약자로 Javascript를 사용한 비동기 통신, 클라이언트와 서버간에 데이터를 주고받는 기술이라고 할 수 있다. 여기서 비동기 Http통신이란 응답(response)와 요청(request)를 비동기 식으로 다룰 수 있다는것을 뜻하게되는데 예를들어 유튜브를 보고있을때 비동기가 지원되지 않는경우 우리가 댓글을 달게되면 페이지는 다시 렌더링되어 처음부터 영상을 다시봐야하는 상황이 발생하게 된다 Axios Node.js와 브라우저를 통한 Promise API를 활용하는 HTTP 통신 라이브러리로 비동기로 HTTP통신이 가능하며 위의 Ajax에서는 제공되지 않는 return을 promise객체로 해주기 때문에 response데이터를 다루기 쉽다. 브라우저의 높은 호환성과 기능면에서 제일 많이 구현되어있어 API중에 제일 많이 사용된다. 그럼 Popmise객체는 무엇일까? Promise객체: 어떤 작업에 관한 `상태 정보`를 갖고 있는 객체 작업이 진행중임을 의미하는 pending, 작업이 성공적으로 완료되었음을 의미하는 fulfilled, 작업이 실패했음을 의미하는 rejected Axios 사용법 [GET요청] : 입력한 url에 존재하는 자원에 요청을한다, GET은 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이다. 주소에 있는 쿼리스트링을 활용해서 정보를 전달하는 것이지 GET메서드는 값이나 상태등을 바꿀 수 없다. axios.get(url,[,config] [POST요청] : 새로운 리소스를 생성(create)할 때 사용한다, 로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용한다. Post를 사용하면 주소창에 쿼리스트링이 남지 않기때문에 GET보다 안전하다. axios.post(&quot;url주소&quot;,{data객체},[,config]) [Delete요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 삭제하는 목적으로 사용된다, Delete메서드는 서버에 있는 데이터베이스의 내용을 삭제하는 것을 주 목적으로 하기에 두 번째 인자를 아예 전달하지 않는다. axios.delete(&quot;/thisisExample/list/30&quot;).then(function(response){ console.log(response); }).catch(function(ex){ throw new Error(ex) } [Put요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 갱신하는 목적으로 사용된다. PUT메서드는 서버에 있는 데이터베이스의 내용을 변경하는 것을 주 목적으로 하고 있다. axios.put(url[, data[, config]]) Fetch ES6부터 들어온 Javascript 내장 라이브러리로 axios와 마찬가지로 Promise 기반으로 만들어져 데이터 다루기가 쉽다 Axios에 비해 기능이 부족하며 브라우저 호환이 낮다. Fetch API 사용법 fetch(url, options) .then(response =&gt; response.json()) .then(data =&gt; console.log(data)) .catch(error =&gt; console.log(&#39;Error:&#39;, error)); url: 필요한 리소스의 URL options: 요청에 대한 설정, 메소드(GET, POST 등), 헤더, 본문 등을 지정할 수 있다 response.json(): fetch는 HTTP 응답을 나타내는 Response 객체를 반환.json() 메소드는 이 응답을 JSON 형태로 파싱한다 catch: 네트워크 요청에 문제가 생길 경우를 대비해 에러 핸들링을 한다" />
+<meta property="og:description" content="API란 Application Programming Interface(애플리케이션 프로그램 인터페이스)의 약자로, 소프트웨어 응용 프로그램에서 다른 소프트웨어 구성 요소 또는 서비스와 상호 작용하기 위한 인터페이스를 제공하는 프로그래밍 기술이다 EX) 약국에 두통약을 사러갔다고 과정했을때 우리는 약사에게 어떤 약을 달라고 요청을하게되고 약사는 그 요청에 따라 약을 찾아서 약을 건네주는 응답을 한다. 우리는 위처럼 요청하는 프로그램이고 약사는 요청에 따른 약(데이터)을 찾아서 응답해주는 API와 동일하다. API의 종류 Ajax Ajax(Asynchronous JavaScript And XML)의 약자로 Javascript를 사용한 비동기 통신, 클라이언트와 서버간에 데이터를 주고받는 기술이라고 할 수 있다. 여기서 비동기 Http통신이란 응답(response)와 요청(request)를 비동기 식으로 다룰 수 있다는것을 뜻하게되는데 예를들어 유튜브를 보고있을때 비동기가 지원되지 않는경우 우리가 댓글을 달게되면 페이지는 다시 렌더링되어 처음부터 영상을 다시봐야하는 상황이 발생하게 된다 Axios Node.js와 브라우저를 통한 Promise API를 활용하는 HTTP 통신 라이브러리로 비동기로 HTTP통신이 가능하며 위의 Ajax에서는 제공되지 않는 return을 promise객체로 해주기 때문에 response데이터를 다루기 쉽다. 브라우저의 높은 호환성과 기능면에서 제일 많이 구현되어있어 API중에 제일 많이 사용된다. 그럼 Popmise객체는 무엇일까? Promise객체: 어떤 작업에 관한 `상태 정보`를 갖고 있는 객체 작업이 진행중임을 의미하는 pending, 작업이 성공적으로 완료되었음을 의미하는 fulfilled, 작업이 실패했음을 의미하는 rejected Axios 사용법 [GET요청] : 입력한 url에 존재하는 자원에 요청을한다, GET은 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이다. 주소에 있는 쿼리스트링을 활용해서 정보를 전달하는 것이지 GET메서드는 값이나 상태등을 바꿀 수 없다. axios.get(url,[,config] [POST요청] : 새로운 리소스를 생성(create)할 때 사용한다, 로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용한다. Post를 사용하면 주소창에 쿼리스트링이 남지 않기때문에 GET보다 안전하다. axios.post(&quot;url주소&quot;,{data객체},[,config]) [Delete요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 삭제하는 목적으로 사용된다, Delete메서드는 서버에 있는 데이터베이스의 내용을 삭제하는 것을 주 목적으로 하기에 두 번째 인자를 아예 전달하지 않는다. axios.delete(&quot;/thisisExample/list/30&quot;).then(function(response){ console.log(response); }).catch(function(ex){ throw new Error(ex) } [Put요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 갱신하는 목적으로 사용된다. PUT메서드는 서버에 있는 데이터베이스의 내용을 변경하는 것을 주 목적으로 하고 있다. axios.put(url[, data[, config]]) Fetch ES6부터 들어온 Javascript 내장 라이브러리로 axios와 마찬가지로 Promise 기반으로 만들어져 데이터 다루기가 쉽다 Axios에 비해 기능이 부족하며 브라우저 호환이 낮다. Fetch API 사용법 fetch(url, options) .then(response =&gt; response.json()) .then(data =&gt; console.log(data)) .catch(error =&gt; console.log(&#39;Error:&#39;, error)); url: 필요한 리소스의 URL options: 요청에 대한 설정, 메소드(GET, POST 등), 헤더, 본문 등을 지정할 수 있다 response.json(): fetch는 HTTP 응답을 나타내는 Response 객체를 반환.json() 메소드는 이 응답을 JSON 형태로 파싱한다 catch: 네트워크 요청에 문제가 생길 경우를 대비해 에러 핸들링을 한다" />
+<link rel="canonical" href="http://0.0.0.0:4000/posts/javascript_api/" />
+<meta property="og:url" content="http://0.0.0.0:4000/posts/javascript_api/" />
 <meta property="og:site_name" content="Jogyejin" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-05-04T12:33:00+09:00" />
+<meta property="article:published_time" content="2024-05-24T12:33:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Step4 React Components" />
+<meta property="twitter:title" content="Javascript API" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-04T12:33:00+09:00","datePublished":"2024-05-04T12:33:00+09:00","description":"Component 개요 React는 모든 페이지가 Component로 구성되어있고 하나의 Component는 여러개의 Component로 구성될 수 있다 (블록을 생각하면 이해하기 쉽다) Component는 JavaScript함수와 유사하며 Props라고 하는 임의의 값을 받은 후 화면에 어떻게 표시되는지를 기술하는 React Element를 반환한다 Component 생성 1 2 3 function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } 위 함수는 Props 객체 인자를 받은 후 React Element를 return 즉 반환하는 컴포넌트이다 이러한 컴포넌트는 JavaScript 함수이기 때문에 말 그대로 함수 컴포넌트라고도 호칭한다 최근에 나온 ES6 Class를 사용해서도 컴포넌트를 정의할 수 있다 1 2 3 4 5 class Welcome extends React.Component { render() { return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;; } } Component 렌더링 예시 1 2 3 4 5 6 7 8 9 10 11 12 function Welcome(props) { return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;; } const root = ReactDOM.createRoot(document.getElementById(&#39;root&#39;)); // &lt;Welcome name=&quot;Sara&quot; /&gt; 엘리먼트로 root.render()를 호출합니다. // React는 {name: &#39;Sara&#39;}를 props로 하여 Welcome 컴포넌트를 호출합니다. const element = &lt;Welcome name=&quot;Sara&quot; /&gt;; // Welcome 컴포넌트는 결과적으로 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트를 반환합니다. root.render(element); // React DOM은 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트와 일치하도록 DOM을 효율적으로 업데이트합니다.","headline":"Step4 React Components","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/posts/react04/"},"url":"http://0.0.0.0:4000/posts/react04/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-05-24T12:33:00+09:00","datePublished":"2024-05-24T12:33:00+09:00","description":"API란 Application Programming Interface(애플리케이션 프로그램 인터페이스)의 약자로, 소프트웨어 응용 프로그램에서 다른 소프트웨어 구성 요소 또는 서비스와 상호 작용하기 위한 인터페이스를 제공하는 프로그래밍 기술이다 EX) 약국에 두통약을 사러갔다고 과정했을때 우리는 약사에게 어떤 약을 달라고 요청을하게되고 약사는 그 요청에 따라 약을 찾아서 약을 건네주는 응답을 한다. 우리는 위처럼 요청하는 프로그램이고 약사는 요청에 따른 약(데이터)을 찾아서 응답해주는 API와 동일하다. API의 종류 Ajax Ajax(Asynchronous JavaScript And XML)의 약자로 Javascript를 사용한 비동기 통신, 클라이언트와 서버간에 데이터를 주고받는 기술이라고 할 수 있다. 여기서 비동기 Http통신이란 응답(response)와 요청(request)를 비동기 식으로 다룰 수 있다는것을 뜻하게되는데 예를들어 유튜브를 보고있을때 비동기가 지원되지 않는경우 우리가 댓글을 달게되면 페이지는 다시 렌더링되어 처음부터 영상을 다시봐야하는 상황이 발생하게 된다 Axios Node.js와 브라우저를 통한 Promise API를 활용하는 HTTP 통신 라이브러리로 비동기로 HTTP통신이 가능하며 위의 Ajax에서는 제공되지 않는 return을 promise객체로 해주기 때문에 response데이터를 다루기 쉽다. 브라우저의 높은 호환성과 기능면에서 제일 많이 구현되어있어 API중에 제일 많이 사용된다. 그럼 Popmise객체는 무엇일까? Promise객체: 어떤 작업에 관한 `상태 정보`를 갖고 있는 객체 작업이 진행중임을 의미하는 pending, 작업이 성공적으로 완료되었음을 의미하는 fulfilled, 작업이 실패했음을 의미하는 rejected Axios 사용법 [GET요청] : 입력한 url에 존재하는 자원에 요청을한다, GET은 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이다. 주소에 있는 쿼리스트링을 활용해서 정보를 전달하는 것이지 GET메서드는 값이나 상태등을 바꿀 수 없다. axios.get(url,[,config] [POST요청] : 새로운 리소스를 생성(create)할 때 사용한다, 로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용한다. Post를 사용하면 주소창에 쿼리스트링이 남지 않기때문에 GET보다 안전하다. axios.post(&quot;url주소&quot;,{data객체},[,config]) [Delete요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 삭제하는 목적으로 사용된다, Delete메서드는 서버에 있는 데이터베이스의 내용을 삭제하는 것을 주 목적으로 하기에 두 번째 인자를 아예 전달하지 않는다. axios.delete(&quot;/thisisExample/list/30&quot;).then(function(response){ console.log(response); }).catch(function(ex){ throw new Error(ex) } [Put요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 갱신하는 목적으로 사용된다. PUT메서드는 서버에 있는 데이터베이스의 내용을 변경하는 것을 주 목적으로 하고 있다. axios.put(url[, data[, config]]) Fetch ES6부터 들어온 Javascript 내장 라이브러리로 axios와 마찬가지로 Promise 기반으로 만들어져 데이터 다루기가 쉽다 Axios에 비해 기능이 부족하며 브라우저 호환이 낮다. Fetch API 사용법 fetch(url, options) .then(response =&gt; response.json()) .then(data =&gt; console.log(data)) .catch(error =&gt; console.log(&#39;Error:&#39;, error)); url: 필요한 리소스의 URL options: 요청에 대한 설정, 메소드(GET, POST 등), 헤더, 본문 등을 지정할 수 있다 response.json(): fetch는 HTTP 응답을 나타내는 Response 객체를 반환.json() 메소드는 이 응답을 JSON 형태로 파싱한다 catch: 네트워크 요청에 문제가 생길 경우를 대비해 에러 핸들링을 한다","headline":"Javascript API","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/posts/javascript_api/"},"url":"http://0.0.0.0:4000/posts/javascript_api/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Step4 React Components | Jogyejin
+  <title>Javascript API | Jogyejin
   </title>
 
   <!--
@@ -248,7 +248,7 @@
         
           
             
-              <span>Step4 React Components</span>
+              <span>Javascript API</span>
             
 
           
@@ -368,6 +368,61 @@
 
       
     
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -463,6 +518,43 @@
 
       
     
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -476,11 +568,6 @@
     
 
     
-  
-
-  
-  
-
   
 
   
@@ -503,7 +590,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>Step4 React Components</h1>
+    <h1 data-toc-skip>Javascript API</h1>
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -519,13 +606,13 @@
 
 <time
   
-  data-ts="1714793580"
+  data-ts="1716521580"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  May  4, 2024
+  May 24, 2024
 </time>
 
       </span>
@@ -570,9 +657,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="343 words"
+  title="1094 words"
 >
-  <em>1 min</em> read</span>
+  <em>6 min</em> read</span>
 
       </div>
       <!-- .d-flex -->
@@ -581,82 +668,99 @@
   </header>
 
   <div class="content">
-    <h2 id="component-개요"><span class="me-2">Component 개요</span><a href="#component-개요" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="api란"><span class="me-2">API란</span><a href="#api란" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>React는 모든 페이지가 <code class="language-plaintext highlighter-rouge">Component로</code> 구성되어있고 하나의 <code class="language-plaintext highlighter-rouge">Component</code>는 여러개의 <code class="language-plaintext highlighter-rouge">Component</code>로 구성될 수 있다 (블록을 생각하면 이해하기 쉽다)</p>
+<blockquote>
+  <p>Application Programming Interface(애플리케이션 프로그램 인터페이스)의 약자로, 소프트웨어 응용 프로그램에서 다른 소프트웨어 구성 요소 또는 서비스와 상호 작용하기 위한 인터페이스를 제공하는 프로그래밍 기술이다</p>
 
-<p>Component는 JavaScript함수와 유사하며 Props라고 하는 임의의 값을 받은 후 화면에 어떻게 표시되는지를 기술하는 React Element를 반환한다</p>
+  <p>EX) 약국에 두통약을 사러갔다고 과정했을때 우리는 약사에게 어떤 약을 달라고 요청을하게되고 약사는 그 요청에 따라 약을 찾아서 약을 건네주는 응답을 한다.</p>
+  <blockquote>
+    <p><a href="/assets/data/Javascript/javascript_api01.png" class="popup img-link  shimmer"><img data-action="zoom" src="/assets/data/Javascript/javascript_api01.png" alt="absolute" loading="lazy"></a></p>
+  </blockquote>
 
-<p><a href="/assets/data/React/react_07.png" class="popup img-link  shimmer"><img data-action="zoom" src="/assets/data/React/react_07.png" alt="absolute" height="600" width="1200" loading="lazy"></a></p>
+  <p>우리는 위처럼 요청하는 프로그램이고 약사는 요청에 따른 약(데이터)을 찾아서 응답해주는 API와 동일하다.<br />
+<a href="/assets/data/Javascript/javascript_api02.png" class="popup img-link  shimmer"><img data-action="zoom" src="/assets/data/Javascript/javascript_api02.png" alt="absolute" loading="lazy"></a></p>
+</blockquote>
 
-<p><br /><br /></p>
+<h2 id="api의-종류"><span class="me-2">API의 종류</span><a href="#api의-종류" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h2 id="component-생성"><span class="me-2">Component 생성</span><a href="#component-생성" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="ajax"><span class="me-2">Ajax</span><a href="#ajax" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<div class="language-javascript highlighter-rouge"><div class="code-header">
-        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre> <span class="kd">function</span> <span class="nf">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-   <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
-</span> <span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+<blockquote>
+  <p>Ajax(Asynchronous JavaScript And XML)의 약자로 Javascript를 사용한 비동기 통신, 클라이언트와 서버간에 데이터를 주고받는 기술이라고 할 수 있다.<br />
+여기서 비동기 Http통신이란 응답(response)와 요청(request)를 비동기 식으로 다룰 수 있다는것을 뜻하게되는데 예를들어 유튜브를 보고있을때 비동기가 지원되지 않는경우 우리가 댓글을 달게되면 페이지는 다시 렌더링되어 처음부터 영상을 다시봐야하는 상황이 발생하게 된다</p>
+</blockquote>
 
-<p>위 함수는 <code class="language-plaintext highlighter-rouge">Props 객체 인자</code>를 받은 후 <code class="language-plaintext highlighter-rouge">React Element를 return 즉 반환</code>하는 컴포넌트이다</p>
+<h3 id="axios"><span class="me-2">Axios</span><a href="#axios" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>이러한 컴포넌트는 JavaScript 함수이기 때문에 말 그대로 <code class="language-plaintext highlighter-rouge">함수 컴포넌트</code>라고도 호칭한다<br /></p>
+<blockquote>
+  <p>Node.js와 브라우저를 통한 Promise API를 활용하는 HTTP 통신 라이브러리로 비동기로 HTTP통신이 가능하며 위의 Ajax에서는 제공되지 않는 return을 promise객체로 해주기 때문에 response데이터를 다루기 쉽다.<br />
+브라우저의 높은 호환성과 기능면에서 제일 많이 구현되어있어 API중에 제일 많이 사용된다.<br />
+그럼 Popmise객체는 무엇일까?</p>
 
-<p>최근에 나온 ES6 Class를 사용해서도 컴포넌트를 정의할 수 있다</p>
+  <ul>
+    <li>
+      <p><strong>Promise객체:</strong> 어떤 작업에 관한 `상태 정보`를 갖고 있는 객체<br />
+작업이 진행중임을 의미하는 pending, 작업이 성공적으로 완료되었음을 의미하는 fulfilled, 작업이 실패했음을 의미하는 rejected</p>
+    </li>
+    <li>
+      <p><strong>Axios 사용법</strong></p>
+    </li>
+  </ul>
 
-<div class="language-javascript highlighter-rouge"><div class="code-header">
-        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre><span class="kd">class</span> <span class="nc">Welcome</span> <span class="kd">extends</span> <span class="nc">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
-  <span class="nf">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
-</span>  <span class="p">}</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table></code></div></div>
+  <p>[GET요청] : 입력한 url에 존재하는 자원에 요청을한다, GET은 서버에서 어떤 데이터를 가져와서 보여준다거나 하는 용도이다. 주소에 있는 쿼리스트링을 활용해서 정보를 전달하는 것이지 <strong>GET메서드는 값이나 상태등을 바꿀 수 없다.</strong></p>
 
-<p><br /></p>
+  <pre><code class="language-javscript">axios.get(url,[,config]
 
-<p><br /></p>
+</code></pre>
 
-<h2 id="component-렌더링-예시"><span class="me-2">Component 렌더링 예시</span><a href="#component-렌더링-예시" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+  <p>[POST요청] : 새로운 리소스를 생성(create)할 때 사용한다, 로그인, 회원가입 등 사용자가 생성한 파일을 서버에다가 업로드할때 사용한다. <strong>Post를 사용하면 주소창에 쿼리스트링이 남지 않기때문에 GET보다 안전하다</strong>.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="code-header">
-        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nf">Welcome</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
-</span><span class="p">}</span>
+  <pre><code class="language-javscript">axios.post("url주소",{data객체},[,config])
+</code></pre>
 
-<span class="kd">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nf">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">));</span>
-<span class="c1">// &lt;Welcome name="Sara" /&gt; 엘리먼트로 root.render()를 호출합니다.</span>
-<span class="c1">// React는 {name: 'Sara'}를 props로 하여 Welcome 컴포넌트를 호출합니다.</span>
-<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">Welcome</span> <span class="nx">name</span><span class="o">=</span><span class="dl">"</span><span class="s2">Sara</span><span class="dl">"</span> <span class="o">/&gt;</span><span class="p">;</span>
-<span class="c1">// Welcome 컴포넌트는 결과적으로 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트를 반환합니다.</span>
-<span class="nx">root</span><span class="p">.</span><span class="nf">render</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
-<span class="c1">// React DOM은 &lt;h1&gt;Hello, Sara&lt;/h1&gt; 엘리먼트와 일치하도록 DOM을 효율적으로 업데이트합니다.</span>
+  <p>[Delete요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 삭제하는 목적으로 사용된다, Delete메서드는 서버에 있는 데이터베이스의 내용을 삭제하는 것을 주 목적으로 하기에 두 번째 인자를 아예 전달하지 않는다.</p>
 
-</pre></td></tr></tbody></table></code></div></div>
+  <pre><code class="language-javscript">axios.delete("/thisisExample/list/30").then(function(response){
+    console.log(response);
+      }).catch(function(ex){
+      throw new Error(ex)
+}
+</code></pre>
 
+  <p>[Put요청]: REST 기반 API 프로그램에서 데이터베이스에 저장되어 있는 내용을 갱신하는 목적으로 사용된다.</p>
+
+  <p>PUT메서드는 서버에 있는 데이터베이스의 내용을 변경하는 것을 주 목적으로 하고 있다.</p>
+
+  <pre><code class="language-javscript">axios.put(url[, data[, config]])
+</code></pre>
+
+</blockquote>
+
+<h3 id="fetch"><span class="me-2">Fetch</span><a href="#fetch" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<blockquote>
+  <p>ES6부터 들어온 Javascript 내장 라이브러리로 axios와 마찬가지로 Promise 기반으로 만들어져 데이터 다루기가 쉽다<br />
+Axios에 비해 기능이 부족하며 브라우저 호환이 낮다.</p>
+
+  <ul>
+    <li>Fetch API 사용법</li>
+  </ul>
+
+  <pre><code class="language-javscript">fetch(url, options)
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.log('Error:', error));
+</code></pre>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">url</code>: 필요한 리소스의 URL</li>
+    <li><code class="language-plaintext highlighter-rouge">options</code>: 요청에 대한 설정, 메소드(GET, POST 등), 헤더, 본문 등을 지정할 수 있다</li>
+    <li><code class="language-plaintext highlighter-rouge">response.json()</code>: fetch는 HTTP 응답을 나타내는 Response 객체를 반환<code class="language-plaintext highlighter-rouge">.json()</code> 메소드는 이 응답을 JSON 형태로 파싱한다</li>
+    <li><code class="language-plaintext highlighter-rouge">catch</code>: 네트워크 요청에 문제가 생길 경우를 대비해 에러 핸들링을 한다</li>
+  </ul>
+
+</blockquote>
 
   </div>
 
@@ -666,8 +770,8 @@
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
         
-          <a href="/categories/framework/">Framework</a>,
-          <a href="/categories/react/">React</a>
+          <a href="/categories/develop/">Develop</a>,
+          <a href="/categories/javascript/">Javascript</a>
       </div>
     
 
@@ -677,9 +781,9 @@
         <i class="fa fa-tags fa-fw me-1"></i>
         
           <a
-            href="/tags/react/"
+            href="/tags/javascript/"
             class="post-tag no-text-decoration"
-          >React</a>
+          >Javascript</a>
         
       </div>
     
@@ -733,7 +837,6 @@
   <!-- div.post-tail-wrapper -->
 </article>
 
-
             
           </main>
 
@@ -754,21 +857,6 @@
 
 
 
-
-  <section id="access-lastmod">
-    <h2 class="panel-heading">Recently Updated</h2>
-    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/usegit02/">Git(깃) 여러대 PC에서 동기화하는방법</a>
-        </li>
-      
-    </ul>
-  </section>
-  <!-- #access-lastmod -->
 
 
               <!-- The trending tags list -->
@@ -921,196 +1009,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1214,10 +1112,61 @@
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1332,6 +1281,178 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1358,10 +1479,20 @@
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -1465,13 +1596,13 @@
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">Javascript</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/vue/">Vue</a>
@@ -1583,127 +1714,7 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
@@ -1947,7 +1958,7 @@
     <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
       
         <article class="col">
-          <a href="/posts/react01/" class="post-preview card h-100">
+          <a href="/posts/javascript_map/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -1959,14 +1970,14 @@
 
 <time
   
-  data-ts="1714534380"
+  data-ts="1712028780"
   data-df="ll"
   
 >
-  May  1, 2024
+  Apr  2, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Step1 React란</h4>
+              <h4 class="pt-0 my-2">Javascript Map함수</h4>
               <div class="text-muted">
                 <p>
                   
@@ -1975,15 +1986,18 @@
 
 
 
-                  React란
+                  Map 함수란
 
-React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브러리이며 컴포넌트라는 작은 조각들로 UI를 구성한다 또한 Virtual Dom이라는 개념을 사용하여 성능을 최적화한다
+Map함수는  콜백 함수를 이용해 각각의 요소에 호출해서 그 값을 변환할 수 있게 해준다. 다시 말하자면 콜백 함수는 배열의 각 요소에 실행된다
 
-주요 특징
+예를들어 간단한 예제 코드를 보도록한다
 
+먼저 다음과 같은 배열 요소가 있다고 가정해본다
 
-  
-    가독성과 유지보수성: JSX 문법을 사용하여 컴포넌트 기반으로 UI를 작성할 수 있으므로 가독성이 높고 유지보수가 용이하며 각 컴포...
+[단순한 Javascript 배열]
+
+  //배열 arr을 만들고 1~5 까지 숫자를 넣어둔다 
+ ...
                 </p>
               </div>
             </div>
@@ -1991,7 +2005,7 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
         </article>
       
         <article class="col">
-          <a href="/posts/react02/" class="post-preview card h-100">
+          <a href="/posts/javascript_call_apply_bind/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2003,14 +2017,14 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
 
 <time
   
-  data-ts="1714793580"
+  data-ts="1712028780"
   data-df="ll"
   
 >
-  May  4, 2024
+  Apr  2, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Step2 React 개발환경 설정 방법</h4>
+              <h4 class="pt-0 my-2">Javascript 함수의 Call & Apply & Bind</h4>
               <div class="text-muted">
                 <p>
                   
@@ -2019,13 +2033,19 @@ React는 페이스북에서 개발한 오픈 소스 자바스크립트 라이브
 
 
 
-                  이번에는 리액트 앱을 직접 만들고 어떻게 사용하는지를 확인해본다
+                  Call 함수란
 
-Create React App으로 리액트 앱 만들기
+먼저 Call을 사용하기전에 왜 사용하는지를 알아보자
 
-리액트 앱은 처음 만들 때 꽤 복잡한 설정을 직접 해주어야 한다. Node.js를 많이 사용해본 사람에게는 쉬울 수 있지만 입문자에게는 꽤나 큰 장벽이다
+모든 함수는 실행할때 함수 앞에 작성한 오브젝트를 this로 참조한다 하기 코드를 보자
 
-따라서 리액트 앱을 만들기 위해 Create React App이라는 Node....
+
+
+위 코드처럼 현재 함수를 실행하는곳이 어느 위치(오브젝트)냐가 즉 this가 되고 this에 따라 함수 결과값이 달라진다
+
+그럼 어떻게 해야 데이터 중심적인 결과를 도출할 수 있을까?
+
+...
                 </p>
               </div>
             </div>
@@ -2033,7 +2053,7 @@ Create React App으로 리액트 앱 만들기
         </article>
       
         <article class="col">
-          <a href="/posts/react0201/" class="post-preview card h-100">
+          <a href="/posts/javascript_01/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -2045,14 +2065,14 @@ Create React App으로 리액트 앱 만들기
 
 <time
   
-  data-ts="1714793580"
+  data-ts="1712028780"
   data-df="ll"
   
 >
-  May  4, 2024
+  Apr  2, 2024
 </time>
 
-              <h4 class="pt-0 my-2">Step2-1 React 기본폴더 및 파일구성</h4>
+              <h4 class="pt-0 my-2">Javascript 구조 분해 할당</h4>
               <div class="text-muted">
                 <p>
                   
@@ -2061,16 +2081,14 @@ Create React App으로 리액트 앱 만들기
 
 
 
-                  이번에는 리액트 앱을 CRA(Create React App)으로 생성 후 만들어지는 파일과 폴더의 구성에 대해 작성해본다
+                  구조 분해 할당이란
 
+객체와 배열은 자바스크립트에서 가장 많이 쓰이는 자료 구조이다
 
+키를 가진 데이터 여러 개를 하나로 사용할 때 객체를, 각 컬렉션에 데이터를 순서대로 저장할 땐 배열을 사용한다
 
-
-  
-    package.json 파일 : 해당 프로젝트의 앱에 어떤 라이브러리가 설치되어있는지, 리액트 버전은 몇 버전인지 등에  대한 정보를 알 수 있다
-  
-  
-    public 폴더 : 리액트에서 공용으로 사용하...
+그러다보니 함수에 객체나 배열을 전달해야 하는 경우가 생긴다 또한 객체나 배열에 저장된 데이터 전체가 아닌 일부만 전달이 필요한 경우가 생기기도 한다.
+...
                 </p>
               </div>
             </div>
@@ -2092,21 +2110,21 @@ Create React App으로 리액트 앱 만들기
 
   
     <a
-      href="/posts/react03/"
+      href="/posts/vscode_prettier/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Step3 React Elements</p>
+      <p>vscode prettier 설정 및 오류 해결방법</p>
     </a>
   
 
   
     <a
-      href="/posts/rn_project_matzip11/"
+      href="/posts/gitblog01/"
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>맛집 앱 만들기 프로젝트 Part11 폼 사용성 개선하기</p>
+      <p>Git블로그 만들기 (jekyll)</p>
     </a>
   
 </nav>
@@ -2363,196 +2381,6 @@ Create React App으로 리액트 앱 만들기
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2656,10 +2484,61 @@ Create React App으로 리액트 앱 만들기
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2774,6 +2653,178 @@ Create React App으로 리액트 앱 만들기
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2800,10 +2851,20 @@ Create React App으로 리액트 앱 만들기
     
     
     
+  
+    
+    
+    
+    
       
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -2907,13 +2968,13 @@ Create React App으로 리액트 앱 만들기
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/javascript/">Javascript</a>
       
         
-        <a class="post-tag btn btn-outline-primary" href="/tags/react/">React</a>
+        <a class="post-tag btn btn-outline-primary" href="/tags/reatnative/">ReatNative</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/vue/">Vue</a>
